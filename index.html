@@ -5,7 +5,8 @@
         &lt;META HTTP-EQUIV="Refresh" CONTENT="0;URL=https://www.setitup.xyz/jsdisabled"&gt;
     </noscript>
     <meta charset="utf-8">
-    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>SetItUp | Setup applications in Linux and Machines</title>
     <meta name="description" content=" Setup applications in Linux, Mac and Windows">
@@ -30,7 +31,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="icon" href="icons/fav.png" type="image/png" sizes="16x16">
-    <link rel="canonical" href="https://setitup.xyz" />
+    <link rel="canonical" href="https://setitup.xyz"/>
 </head>
 <body>
 
@@ -107,7 +108,7 @@
                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share
             </a>
         </div>
-        <div class="g-plusone" data-size="tall" ></div>
+        <div class="g-plusone" data-size="tall"></div>
         <div id="fb-root"></div>
         <script async defer src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
         <script type="IN/Share" data-counter="right"></script>
@@ -283,12 +284,11 @@
             `<img src='${selectedApp.image}' alt="" class="responsive-img circle">
             <span class="title">${selectedApp.name}</span>
             <p class="light">
-            ${selectedApp.category !== undefined ? selectedApp.category + '<br>' : ""}
+            ${(selectedApp.category !== undefined && selectedApp.category !== "") ? selectedApp.category + '<br>' : ""}
             ${selectedApp.description !== undefined ? selectedApp.description : ""}</p>
             <a href="javascript:;" class="secondary-content"><i class="material-icons">gradey</i></a>
-            <a href="javascript:;" onclick="deleteFromList('${selectedApp.name}')" class="secondary-content"><i class="material-icons">close</i></a>
-            <a class="btn dropdown-trigger" href="javascript:;" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a>
-            <a class='dropdown-trigger btn' href='javascript:;' data-target='dropdown1'>Drop Me!</a>`;
+            <a href="javascript:;" onclick="deleteFromList('${selectedApp.name}')" class="secondary-content">
+            <i class="material-icons">close</i></a>`;
 
         console.log("Add item to list");
         applicationSelectionElement.appendChild(divElement);

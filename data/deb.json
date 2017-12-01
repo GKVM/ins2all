@@ -1,106 +1,82 @@
 [
   {
     "name": "Chrome",
-    "os": "deb",
     "web": "google.com/chrome",
     "image": "https://lh3.googleusercontent.com/nYhPnY2I-e9rpqnid9u9aAODz4C04OycEGxqHG5vxFnA35OGmLMrrUmhM9eaHKJ7liB-=w300",
+    "category": "Web browser",
     "description": "Google Chrome is a freeware web browser developed by Google. It was first released in September 2008, for Microsoft Windows, and was later ported to Linux, macOS, iOS and Android.",
-    "commands": "wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - \nsudo sh -c 'echo \"deb http://dl.google.com/linux/chrome/deb/ stable main\" >> /etc/apt/sources.list.d/google.list'\nsudo apt-get update \nsudo apt-get install google-chrome-stable"
+    "commands": "wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - \nsudo sh -c 'echo \"deb http://dl.google.com/linux/chrome/deb/ stable main\" >> /etc/apt/sources.list.d/google.list'\nsudo apt-get update \nsudo apt-get install google-chrome-stable "
   },
   {
     "name": "Firefox",
-    "os": "deb",
     "web": "www.mozilla.org/en-US/firefox",
     "image": "https://botw-pd.s3.amazonaws.com/styles/logo-thumbnail/s3/082013/mozilla_firefox_2.png?itok=sweQlR0Y",
+    "category": "Web browser",
     "description": "Mozilla Firefox is a free and open-source web browser developed by the Mozilla Foundation and its subsidiary the Mozilla Corporation.",
-    "commands": "cd ~\nwget https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US\ntar zcPf ~/mozilla-backup-$(date +%s).tar.gz ~/.mozilla\njxf firefox*.tar.bz2 -C $HOME"
+    "commands": "cd ~\nwget https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US\ntar zcPf ~/mozilla-backup-$(date +%s).tar.gz ~/.mozilla\njxf firefox*.tar.bz2 -C $HOME\n"
   },
   {
     "name": "MongoDB",
-    "os": "deb",
     "web": "mongodb.com",
     "image": "https://avatars0.githubusercontent.com/u/45120?s=280&v=4",
+    "category": "",
     "description": "MongoDB is a free and open-source cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schemas.",
     "commands": "sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6\necho \"deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse\" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list\nsudo apt-get update\nsudo apt-get install -y mongodb-org"
   },
   {
     "name": "Opera",
-    "os": "deb",
     "web": "opera.com",
     "image": "http://www-static.operacdn.com/static-heap/7f/7f022d3c6da5eeaa8b0e9d4aef828465121b6e4c/opera-browser-for-android.png",
+    "category": "Web browser",
     "description": "Opera is a web browser for Windows, macOS, and Linux operating systems developed by Opera Software. It uses the Blink layout engine. An earlier version using the Presto layout engine is still available, and runs on FreeBSD systems.",
     "commands": "sudo sh -c 'echo \"deb http://deb.opera.com/opera/ stable non-free\" >> /etc/apt/sources.list.d/opera.list'\nsudo sh -c 'wget -O - http://deb.opera.com/archive.key | apt-key add -'\nsudo apt-get update\nsudo apt-get install opera"
   },
   {
     "name": "Signal",
-    "os": "deb",
     "web": "signal.org",
     "image": "https://signal.org/assets/header/logo-70556391d9e0f1642cf4ac8bafb3911db909aa3ca820e6d2dc412fa1cb509fa5.png",
+    "category": "",
     "description": "Signal is an encrypted communications application for Android and iOS. It uses the Internet to send one-to-one and group messages, which can include files, voice notes, images and videos, and make one-to-one voice and video calls.",
     "commands": "curl -s https://updates.signal.org/desktop/apt/keys.asc | sudo apt-key add - \necho \"deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main\" | sudo tee -a /etc/apt/sources.list.d/signal-xenial.list \nsudo apt update\nsudo apt install signal-desktop"
   },
   {
     "name": "IntelliJ CE",
-    "os": "deb",
     "web": "jetbrains.com/idea/",
     "image": "https://seeklogo.com/images/I/intellij-idea-logo-F645E1F432-seeklogo.com.png",
+    "category": "",
     "description": "IntelliJ IDEA is a Java integrated development environment for developing computer software. It is developed by JetBrains, and is available as an Apache 2 Licensed community edition, and in a proprietary commercial edition.",
     "commands": ""
   },
   {
     "name": "Eclipse",
-    "os": "deb",
     "web": "eclipse.org",
     "image": "https://www.eclipse.org/artwork/images/v2/logo-800x188.png",
+    "category": "",
     "description": "Eclipse is an integrated development environment used in computer programming, and is the most widely used Java IDE. It contains a base workspace and an extensible plug-in system for customizing the environment.",
     "commands": ""
   },
   {
     "name": "Gimp",
-    "os": "",
     "web": "",
     "image": "",
+    "category": "",
     "description": "",
     "commands": ""
   },
   {
     "name": "LibreOffice",
-    "os": "deb",
     "web": "libreoffice.org",
-    "image": "https://wiki.documentfoundation.org/images/7/77/LibreOffice_external_logo_300px.png",
-    "description": "LibreOffice is a free and open source office suite, a project of The Document Foundation. It was forked from OpenOffice.org in 2010, which was an open-sourced version of the earlier StarOffice.",
+    "image": "https://tr1.cbsistatic.com/hub/i/r/2015/08/19/8a73bb60-e4ca-48d9-aa86-a5ea9a7fefef/resize/770x/35785983a484015f4d7bb864f239a3f3/libreofficehero.jpg",
+    "category": "",
+    "description": "LibreOffice is a free and open source office suite, a project of The Document Foundation. ",
     "commands": ""
   },
   {
     "name": "VLC",
-    "os": "deb",
     "web": "videolan.org/vlc/",
     "image": "https://images.videolan.org/images/icons-VLC/vlc.mini.svg",
+    "category": "",
     "description": "VLC media player is a free and open-source, portable and cross-platform media player and streaming media server developed by the VideoLAN project.",
     "commands": "sudo apt-get install libavcodec-extra-53\nsudo apt-get update\nsudo apt-get install vlc browser-plugin-vlc"
-  },
-  {
-    "name": "Java Development Kit",
-    "os": "deb",
-    "web": "java.com",
-    "image": "https://sdtimes.com/wp-content/uploads/2015/10/1026.sdt-javaone.png",
-    "description": "Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible.",
-    "commands": "sudo apt-get update\nsudo apt-get install default-jdk"
-  },
-  {
-    "name": "Oracle Java Development Kit 8",
-    "os": "deb",
-    "web": "java.com",
-    "image": "https://sdtimes.com/wp-content/uploads/2015/10/1026.sdt-javaone.png",
-    "description": "Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible.",
-    "commands": "sudo apt-get update\nsudo apt-get install oracle-java8-installer"
-  },
-  {
-    "name": "Oracle Java Development Kit 9",
-    "os": "deb",
-    "web": "java.com",
-    "image": "https://sdtimes.com/wp-content/uploads/2015/10/1026.sdt-javaone.png",
-    "description": "Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible.",
-    "commands": "sudo apt-get update\nsudo apt-get install oracle-java9-installer"
   }
 ]

@@ -56,14 +56,6 @@
     "commands": ""
   },
   {
-    "name": "Gimp",
-    "os": "",
-    "web": "",
-    "image": "",
-    "description": "",
-    "commands": ""
-  },
-  {
     "name": "LibreOffice",
     "os": "deb",
     "web": "libreoffice.org",
