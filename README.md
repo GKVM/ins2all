@@ -7,7 +7,7 @@ Steps:
 1. Select the applications that has to be installed.
 2. Download and run the script
 
-##Currently supported OS
+## Currently supported OS
 * Linux
 * Mac OS
 
