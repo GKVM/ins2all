@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>SetItUp - Open source tool to setup your computer.</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+    <link rel="icon" href="icons/fav.png" type="image/png" sizes="16x16">
+</head>
+<body>
+<nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="#">Navbar Link</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="sidenav">
+            <li><a href="#"></a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="sidenav-trigger button-collapse"><i
+                class="material-icons">menu</i></a>
+    </div>
+</nav>
+
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+        <br><br>
+        <h1 class="header center orange-text">Set it up</h1>
+        <h5 class="center black-text light">Simple way to set up applications in your computer.</h5>
+        <div class="row center black-text">
+            <h5 class="header col s12 light"> Select applications -> Download and run script -> Go play outside </h5>
+        </div>
+        <div class="row center">
+            <a href="#input-apps" id="download-button"
+               class="btn-large waves-effect waves-light orange">Get Started</a>
+        </div>
+        <div id="extra-text"></div>
+        <br>
+        <br>
+    </div>
+</div>
+<div class="container">
+    <div class="light">
+        Selected apps
+    </div>
+    <ul class="collection" id="selected-apps">
+    </ul>
+
+    <div class="row" id="input-app">
+        <div class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">apps</i>
+                    <input type="text" id="input-apps" class="autocomplete">
+                    <label for="input-apps">Software</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+    </div>
+    <div class="row center" id="download">
+        <a class="waves-effect waves-light btn tooltipped" data-position="top"
+           data-tooltip="Get script" onclick="getFile()">
+            Download
+            <i class="material-icons left">file_download</i>
+        </a>
+    </div>
+    <br>
+    <div class="row center">
+        <div>run the command&emsp;<a class="tooltipped" data-position="top" data-delay="600"
+                                     data-tooltip="Paste the following command in Terminal or Bash">?</a>
+        </div>
+    </div>
+    <div class="row center">
+        <div class="col s12 center language center">
+            <form>$ <code style="max-width: 60%" class="language-markup code"
+                              id="run-command-box">
+                sh ~/Downloads/setup.sh</code>
+                <div class="waves-effect btn tooltipped" data-position="top" data-tooltip="Copy command"><i
+                        class="material-icons postfix small" onclick="copyText()">content_copy</i></div>
+            </form>
+        </div>
+    </div>
+    <div class="row" id="share">
+        Share
+        <br>
+        <a href="https://twitter.com/intent/tweet?button_hashtag=LoveTwitter&ref_src=twsrc%5Etfw"
+           class="twitter-hashtag-button" data-size="large" data-show-count="false">Tweet #LoveTwitter</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <div class="fb-share-button"
+             data-href="https://developers.facebook.com/docs/plugins/"
+             data-layout="button_count" data-size="large" data-mobile-iframe="false">
+            <a class="fb-xfbml-parse-ignore" target="_blank"
+               href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share
+            </a>
+        </div>
+        <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+        <script type="IN/Share" data-counter="right"></script>
+        <script type="text/javascript" src="//www.reddit.com/buttonlite.js?i=1"></script>
+        <!-- Place this tag where you want the button to render. -->
+        <a class="github-button" href="https://github.com/ntkme/github-buttons" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
+        <!-- Place this tag where you want the button to render. -->
+        <a class="github-button" href="https://github.com/ntkme/github-buttons/fork" data-size="large" data-show-count="true" aria-label="Fork ntkme/github-buttons on GitHub">Fork</a>
+        <a href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark">
+        </a>
+    </div>
+</div>
+
+<ul id="dropdown1" class="dropdown-content">
+    <li><a href="#!">one<span class="badge">1</span></a></li>
+    <li><a href="#!">two<span class="new badge">1</span></a></li>
+    <li><a href="#!">three</a></li>
+</ul>
+
+<footer class="page-footer orange">
+    <div class="footer-copyright">
+        <div class="container">
+            Copyright 2017 Set It Up
+        </div>
+    </div>
+</footer>
+
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/init.js"></script>
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    let js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.11';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script>
+
+    const applicationSelectionElement = document.getElementById("selected-apps");
+    const valText = document.getElementById("input-apps");
+    const runCommandBox = document.getElementById("run-command-box");
+
+    let dataList = [];
+    let nameAndImageList = [];
+    let selectedApps = [];
+    let fileName = "setitup-default.sh";
+
+
+    $(document).ready(function () {
+
+        let OSName = "Unknown OS";
+        if (navigator.platform.indexOf("Win") !== -1) OSName = "Windows";
+        if (navigator.platform.indexOf("Mac") !== -1) OSName = "MacOS";
+        if (navigator.platform.indexOf("X11") !== -1) OSName = "UNIX";
+        if (navigator.platform.indexOf("Linux") !== -1) OSName = "Linux";
+
+        console.log(OSName);
+
+        switch (OSName) {
+            case "Linux" :
+                $.getJSON('data/deb.json', function (data) {
+                    dataList = data;
+                    data.forEach(function (element) {
+                        nameAndImageList[element.name] = element.image;
+                    });
+                    $('input.autocomplete').autocomplete({
+                        data: nameAndImageList,
+                        onAutocomplete: function (app) {
+                            addToList(app)
+                        },
+                        limit: 6,
+                        //minLength: 4
+                    });
+                    addToList('Chrome');
+                    addToList('VLC');
+                });
+                break;
+            case "Mac" :
+                $.getJSON('data/deb.json', function (data) {
+                    dataList = data;
+                    data.forEach(function (element) {
+                        nameAndImageList[element.name] = element.image;
+                    });
+                    $('input.autocomplete').autocomplete({
+                        data: nameAndImageList,
+                        onAutocomplete: function (app) {
+                            addToList(app)
+                        },
+                        limit: 6,
+                        //minLength: 4
+                    });
+                    addToList('Chrome');
+                    addToList('VLC');
+                });
+                break;
+            default :
+                $('.extra-text').textContent("OS not yet supported.");
+                $.getJSON('data/deb.json', function (data) {
+                    dataList = data;
+                    data.forEach(function (element) {
+                        nameAndImageList[element.name] = element.image;
+                    });
+                    $('input.autocomplete').autocomplete({
+                        data: nameAndImageList,
+                        onAutocomplete: function (app) {
+                            addToList(app)
+                        },
+                        limit: 6,
+                        //minLength: 4
+                    });
+                    addToList('Chrome');
+                    addToList('VLC');
+                });
+        }
+
+        $('.tooltipped').tooltip();
+    });
+
+    function getFile() {
+
+        let script = "#!/bin/bash\n\n";
+        let postUpdateCommand = [];
+
+        let i;
+        for (i = 0; i < selectedApps.length; i++) {
+            let splitCommands = selectedApps[i].commands.split(/sudo \D+ update/);
+            if (splitCommands.length === 2) {
+                postUpdateCommand.push({"name": selectedApps[i].name, "post_update": splitCommands[1]});
+            }
+            script = script
+                .concat("\n\n# " + selectedApps[i].name + "\n")
+                .concat(splitCommands[0]);
+        }
+
+        if (postUpdateCommand.length > 1) {
+            script = script
+                .concat("\n\n#Update system")
+                .concat("\nsudo apt-get update\n")
+        }
+
+        for (i = 0; i < postUpdateCommand.length; i++) {
+            script = script
+                .concat("\n\n#Installing " + postUpdateCommand[i].name + "")
+                .concat(postUpdateCommand[i].post_update);
+        }
+
+        fileName = `setItUp-${Number.parseInt(Math.random() * 10000)}.sh`;
+        runCommandBox.textContent = "sh ~/Downloads/" + fileName;
+
+        let element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(script));
+        element.setAttribute('download', fileName);
+
+        element.style.display = 'none';
+        document.body.appendChild(element);
+        element.click();
+        document.body.removeChild(element);
+    }
+
+    function addToList(applicationName) {
+        let divElement = document.createElement("li");
+
+        let selectedApp;
+
+        for (let i = 0; i < dataList.length; i++) {
+            if (dataList[i].name === applicationName) {
+                selectedApp = dataList[i];
+                break;
+            }
+        }
+
+        divElement.setAttribute('class', 'collection-item avatar hoverable');
+        divElement.setAttribute('id', selectedApp.name);
+        divElement.innerHTML =
+            `<img src='${selectedApp.image}' alt="" class="responsive-img circle">
+            <span class="title">${selectedApp.name}</span>
+            <p class="light">${selectedApp.description}</p>
+            <a href="javascript:;" class="secondary-content"><i class="material-icons">gradey</i></a>
+            <a href="javascript:;" onclick="deleteFromList('${selectedApp.name}')" class="secondary-content"><i class="material-icons">close</i></a>
+            <a class="btn dropdown-trigger" href="javascript:;" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a>
+            <a class='dropdown-trigger btn' href='javascript:;' data-target='dropdown1'>Drop Me!</a>`;
+
+        console.log("Add item to list");
+        applicationSelectionElement.appendChild(divElement);
+        selectedApps.push(selectedApp);
+
+        delete nameAndImageList[applicationName];
+
+        valText.value = "";
+        valText.focus();
+
+        $('.dropdown-trigger').dropdown();
+    }
+
+    function deleteFromList(applicationName) {
+        $(`#${applicationName}`).remove();
+
+        for (let i = 0; i < dataList.length; i++) {
+            if (dataList[i].name === applicationName) {
+                nameAndImageList[applicationName] = dataList[i].image;
+                break;
+            }
+        }
+
+        selectedApps = selectedApps.filter(function (el) {
+            return el.name !== applicationName;
+        });
+    }
+
+    function copyText() {
+        let copyText = document.getElementById("run-command-box");
+        copyText.select();
+        document.execCommand("Copy");
+        alert("Copied the text: " + copyText.value);
+    }
+</script>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<script
+        type="text/javascript"
+        async defer
+        src="//assets.pinterest.com/js/pinit.js"
+></script>
+</body>
+</html>
