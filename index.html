@@ -35,7 +35,7 @@
     <link rel="icon" href="icons/image.png" type="image/png" sizes="16x16">
     <link rel="manifest" href="manifest.json">
     <link rel="canonical" href="http://setitup.xyz"/>
-    <meta name="theme-color" content="#ffcc00"/>
+    <meta name="theme-color" content="#512DA8"/>
 </head>
 <body>
 
@@ -114,7 +114,8 @@
     </div>
     <div class="row" id="share">
         <div class="divider"></div>
-        <div class="subtitle">Share</div>
+        <br>
+        <div class="with-header">Share</div>
         <br>
         <a href="https://twitter.com/intent/tweet?text=Easy%20way%20to%20setup%20applications.&url=http://setitup.xyz&button_hashtag=setitup&ref_src=twsrc%5Etfw"
            class="twitter-hashtag-button" data-size="large">Tweet #setitup</a>
@@ -211,7 +212,10 @@
                 $('#extra-text').html(`<h3> ${OSName} is not supported yet.</h3>`);
                 getAppList('data/deb.json');
         }
-        $('tooltipped').tooltip();
+
+
+        $('.tooltipped').tooltip();
+
     });
 
     function getAppList(path) {
