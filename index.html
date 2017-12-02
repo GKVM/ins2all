@@ -195,11 +195,7 @@
 
     $(document).ready(function () {
 
-        let OSName = navigator.platform;
-        if (navigator.platform.indexOf("Win") !== -1) OSName = "Windows";
-        if (navigator.platform.indexOf("Mac") !== -1) OSName = "MacOS";
-        if (navigator.platform.indexOf("X11") !== -1) OSName = "UNIX";
-        if (navigator.platform.indexOf("Linux") !== -1) OSName = "Linux";
+        let OSName = getOS();
 
         console.log(OSName);
         $('#os-div').html(OSName);
@@ -207,14 +203,14 @@
             case "Linux" :
                 getAppList('data/deb.json');
                 break;
-            case "Mac" :
+            case "MacOS" :
                 getAppList('data/mac.json');
                 break;
             case "Windows" :
                 getAppList('data/windows.json');
                 break;
             default :
-                $('#extra-text').html(`<h3> ${OSName} operating system is not supported yet.</h3>`);
+                $('#extra-text').html(`<h3> ${OSName} is not supported yet.</h3>`);
                 getAppList('data/deb.json');
         }
         $('tooltipped').tooltip();
@@ -237,6 +233,28 @@
             addToList('Chrome');
             addToList('VLC');
         });
+    }
+
+    function getOS() {
+        let userAgent = window.navigator.userAgent,
+            platform = window.navigator.platform,
+            macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+            windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+            iosPlatforms = ['iPhone', 'iPad', 'iPod'],
+            os = null;
+
+        if (macosPlatforms.indexOf(platform) !== -1) {
+            os = 'MacOS';
+        } else if (iosPlatforms.indexOf(platform) !== -1) {
+            os = 'iOS';
+        } else if (windowsPlatforms.indexOf(platform) !== -1) {
+            os = 'Windows';
+        } else if (/Android/.test(userAgent)) {
+            os = 'Android';
+        } else if (!os && /Linux/.test(platform)) {
+            os = 'Linux';
+        }
+        return os;
     }
 
     /*Share button scripts*/
