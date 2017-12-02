@@ -32,7 +32,7 @@ function getFile() {
             .concat(postUpdateCommand[i].post_update);
     }
 
-    fileName = `setItUp-${Number.parseInt(Math.random() * 10000)}.sh`;
+    fileName = `setitup-${Number.parseInt(Math.random() * 10000)}.sh`;
     runCommandBox.textContent = "sh ~/Downloads/" + fileName;
 
     let element = document.createElement('a');
