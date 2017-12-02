@@ -40,15 +40,26 @@
     <div class="container">
         <br><br>
         <h1 class="header center orange-text">Set it up</h1>
+        <br>
         <h5 class="center black-text light">Simple way to set up applications in your computer.</h5>
         <div class="row center black-text">
             <h5 class="header col s12 light"> Select applications -> Download and run script -> Go play outside </h5>
         </div>
+        <p class="center-align">
+            This application is made to help you install and setup the applications and do the other basic functionalities
+            in your computer. All you need to do is select the applications you want to install in your computer. This
+            application will generate a bash script. You can run it in your computer using the command given below.
+            That should install and setup the applications.
+
+            This is an open source project. If the application you want is not present, please mention it in the comments.
+            The source code is hosted here. Please feel free to contribute to this project.
+        </p>
+        <div id="os-div" class="center badge light"></div>
+        <div id="extra-text"></div>
         <div class="row center">
             <a href="#input-apps" id="download-button"
-               class="btn-large waves-effect waves-light orange">Get Started</a>
+            class="btn-large waves-effect waves-light orange">Get Started</a>
         </div>
-        <div id="extra-text"></div>
         <br>
         <br>
     </div>
@@ -181,7 +192,7 @@
         if (navigator.platform.indexOf("Linux") !== -1) OSName = "Linux";
 
         console.log(OSName);
-
+        $('#os-div').html(OSName);
         switch (OSName) {
             case "Linux" :
                 getAppList('data/deb.json');
@@ -193,7 +204,7 @@
                 getAppList('data/windows.json');
                 break;
             default :
-                $('#extra-text').html(`<h3> ${OSName} operating system is not supported yet.`);
+                $('#extra-text').html(`<h3> ${OSName} operating system is not supported yet.</h3>`);
                 getAppList('data/deb.json');
         }
         $('tooltipped').tooltip();
