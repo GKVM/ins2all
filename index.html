@@ -20,6 +20,7 @@
     <meta property="og:image" content="http://www.setitup.com/assets/img/setitup.jpg">
     <meta property="og:site_name" content="SetItUp">
     <meta property="og:description" content="Create your Free Resume now - For students, freshers and professionals.">
+
     <link rel="shortcut icon" href="https://www.setitup.com/icons/fav.png">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
@@ -131,20 +132,19 @@
             /**
              *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
              *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-            /*
             var disqus_config = function () {
-            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                this.page.url = "http://setitup.xyz";
+                this.page.identifier = ""; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
             };
-            */
-            (function() { // DON'T EDIT BELOW THIS LINE
+            (function () { // DON'T EDIT BELOW THIS LINE
                 var d = document, s = d.createElement('script');
                 s.src = 'https://http-setitup-xyz.disqus.com/embed.js';
                 s.setAttribute('data-timestamp', +new Date());
                 (d.head || d.body).appendChild(s);
             })();
         </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
     </div>
 </div>
 
@@ -174,7 +174,7 @@
 
     $(document).ready(function () {
 
-        let OSName = "Unknown OS";
+        let OSName = navigator.platform;
         if (navigator.platform.indexOf("Win") !== -1) OSName = "Windows";
         if (navigator.platform.indexOf("Mac") !== -1) OSName = "MacOS";
         if (navigator.platform.indexOf("X11") !== -1) OSName = "UNIX";
@@ -184,64 +184,41 @@
 
         switch (OSName) {
             case "Linux" :
-                $.getJSON('data/deb.json', function (data) {
-                    dataList = data;
-                    data.forEach(function (element) {
-                        nameAndImageList[element.name] = element.image;
-                    });
-                    $('input.autocomplete').autocomplete({
-                        data: nameAndImageList,
-                        onAutocomplete: function (app) {
-                            addToList(app)
-                        },
-                        limit: 6,
-                        //minLength: 4
-                    });
-                    addToList('Chrome');
-                    addToList('VLC');
-                });
+                getAppList('data/deb.json');
                 break;
             case "Mac" :
-                $.getJSON('data/deb.json', function (data) {
-                    dataList = data;
-                    data.forEach(function (element) {
-                        nameAndImageList[element.name] = element.image;
-                    });
-                    $('input.autocomplete').autocomplete({
-                        data: nameAndImageList,
-                        onAutocomplete: function (app) {
-                            addToList(app)
-                        },
-                        limit: 6,
-                        //minLength: 4
-                    });
-                    addToList('Chrome');
-                    addToList('VLC');
-                });
+                getAppList('data/mac.json');
+                break;
+            case "Windows" :
+                getAppList('data/windows.json');
                 break;
             default :
-                $('.extra-text').textContent("OS not yet supported.");
-                $.getJSON('data/deb.json', function (data) {
-                    dataList = data;
-                    data.forEach(function (element) {
-                        nameAndImageList[element.name] = element.image;
-                    });
-                    $('input.autocomplete').autocomplete({
-                        data: nameAndImageList,
-                        onAutocomplete: function (app) {
-                            addToList(app)
-                        },
-                        limit: 6,
-                        //minLength: 4
-                    });
-                    addToList('Chrome');
-                    addToList('VLC');
-                });
+                $('#extra-text').html(`<h3> ${OSName} operating system is not supported yet.`);
+                getAppList('data/deb.json');
         }
-        $('.tooltipped').tooltip();
+        $('tooltipped').tooltip();
     });
-    /*Share button scripts*/
 
+    function getAppList(path) {
+        $.getJSON(path, function (data) {
+            dataList = data;
+            data.forEach(function (element) {
+                nameAndImageList[element.name] = element.image;
+            });
+            $('input.autocomplete').autocomplete({
+                data: nameAndImageList,
+                onAutocomplete: function (app) {
+                    addToList(app)
+                },
+                limit: 6,
+                //minLength: 4
+            });
+            addToList('Chrome');
+            addToList('VLC');
+        });
+    }
+
+    /*Share button scripts*/
     (function (d, s, id) {
         let js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
