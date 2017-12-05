@@ -78,5 +78,45 @@
     "category": "",
     "description": "VLC media player is a free and open-source, portable and cross-platform media player and streaming media server developed by the VideoLAN project.",
     "commands": "sudo apt-get install libavcodec-extra-53\nsudo apt-get update\nsudo apt-get install vlc browser-plugin-vlc"
+  },
+  {
+    "name": "Unity tweak tools",
+    "web": "",
+    "image": "",
+    "category": "",
+    "description": "",
+    "commands": "sudo install unity-tweak-tool"
+  },
+  {
+    "name": "Shortcut",
+    "web": "https://www.shotcut.org/",
+    "image": "",
+    "category": "video editor",
+    "description": "",
+    "commands": "snap install shotcut --classic"
+  },
+  {
+    "name": "Steam",
+    "web": "store.steampowered.com/",
+    "image": "https://www.google.co.in/imgres?imgurl=http://3.bp.blogspot.com/-Jbo2ByKvK60/VoFsdmqP4mI/AAAAAAAAIxk/Ahz__bJjweU/s1600/Logo%252BSteam.png&imgrefurl=http://logo-share.blogspot.com/2015/12/steam-logo.html&h=1067&w=1600&tbnid=LQTWWShCy8gZ1M:&tbnh=132&tbnw=198&usg=__sAs0EBs7Pyal0tWIwIwbO_iFp3o%3D&vet=1&docid=q8pDB1IDQ0b4iM&itg=1&sa=X&ved=0ahUKEwj89si2uPDXAhWMK48KHYTrB18Q_B0IogEwEg",
+    "category": "",
+    "description": "Steam is a digital distribution platform developed by Valve Corporation, which offers digital rights management, multiplayer gaming, video streaming and social networking services.",
+    "commands": "sudo add-apt-repository multiverse\nsudo apt-get install steam"
+  },
+  {
+    "name": "Visual Studio Code",
+    "web": "",
+    "image": "",
+    "category": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Visual_Studio_Code_0.10.1_icon.png",
+    "description": "Visual Studio Code is a source code editor developed by Microsoft for Windows, Linux and macOS. It includes support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring.",
+    "commands": "curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg\nsudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg\nsudo sh -c 'echo \"deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main\" > /etc/apt/sources.list.d/vscode.list'\nsudo apt-get install code"
+  },
+  {
+    "name": "Stacer",
+    "web": "",
+    "image": "",
+    "category": "",
+    "description": "System optimizer and monitor",
+    "commands": "wget https://github.com/oguzhaninan/Stacer/releases/download/v1.0.4/Stacer_1.0.4_amd64.deb\nsudo dpkg --install Stacer_1.0.4_amd64.deb"
   }
 ]
