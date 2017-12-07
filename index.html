@@ -104,12 +104,13 @@
     </div>
     <div class="row center">
         <div class="col s12 center language center">
-            <form>$ <code style="max-width: 60%" class="language-markup code"
-                          id="run-command-box">
-                sh ~/Downloads/setitup.sh</code>
+            <div>$
+                <code style="max-width: 60%" class="language-markup code"
+                      id="run-command-box">
+                    sh ~/Downloads/setitup.sh</code>
                 <div class="waves-effect btn tooltipped" data-position="top" data-tooltip="Copy command"><i
                         class="material-icons postfix small" onclick="copyText()">content_copy</i></div>
-            </form>
+            </div>
         </div>
     </div>
     <div class="row" id="share">
@@ -121,13 +122,13 @@
            class="twitter-hashtag-button" data-size="large">Tweet #setitup</a>
         <script async defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <br>
-        <div class="fb-share-button"
+        <input class="fb-share-button"
              data-href="http://setitup.xyz"
              data-layout="button_count" data-size="large" data-mobile-iframe="false">
             <a class="fb-xfbml-parse-ignore" target="_blank"
                href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsetitup.xyz%2F&amp;src=sdkpreparse">
                 Share</a>
-        </div>
+        </input>
         <div id="fb-root"></div>
         <br>
         <div class="g-plusone" data-size="tall"></div>
@@ -177,7 +178,7 @@
 <footer class="page-footer orange">
     <div class="footer-copyright">
         <div class="container">
-            Copyright ©  2017 Set It Up
+            Copyright © 2017 Set It Up
         </div>
     </div>
 </footer>
@@ -212,7 +213,6 @@
                 $('#extra-text').html(`<h3> ${OSName} is not supported yet.</h3>`);
                 getAppList('data/deb.json');
         }
-
 
         $('.tooltipped').tooltip();
 
