@@ -1,6 +1,6 @@
 {
-  "short_name": "Set it up",
-  "name": "Set it up",
+  "short_name": "Set this up",
+  "name": "Set this up",
   "icons": [
     {
       "src": "icons/image.png",
@@ -8,7 +8,7 @@
       "sizes": "48x48"
     }
   ],
-  "start_url": "./",
+  "start_url": "setthisup.org",
   "background_color": "#F07E20",
   "theme_color": "#F07E20",
   "orientation": "portrait",
