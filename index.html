@@ -144,7 +144,7 @@
         <br>
     </div>
 
-    <div class="row" id="data-contribute">
+    <div class="row" id="contribute">
         <div class="divider"></div>
         <div class="with-header">Contribute</div>
         <div class="col light grey-text">
@@ -209,6 +209,18 @@
 
     let dataList = [];
     let nameAndImageList = [];
+
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('js/worker.js').then(function(registration) {
+                // Registration was successful
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+                // registration failed :(
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
 
     $(document).ready(function () {
 
