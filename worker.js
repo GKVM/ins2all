@@ -1,8 +1,10 @@
 var CACHE_NAME = 'setthisup-site-cache-v1';
 var urlsToCache = [
     '/',
-    '/styles/main.css',
-    '/script/main.js'
+    'css/materialize.css',
+    'css/style.css',
+    'js/set-it-up.js',
+    'js/materialize.min.js'
 ];
 
 self.addEventListener('install', function(event) {
