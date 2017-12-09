@@ -3,12 +3,12 @@
   "name": "Set this up",
   "icons": [
     {
-      "src": "icons/image.png",
+      "src": "/icons/image.png",
       "type": "image/png",
       "sizes": "48x48"
     }
   ],
-  "start_url": "setthisup.org",
+  "start_url": "/",
   "background_color": "#f4a442",
   "theme_color": "#f4a442",
   "orientation": "portrait",
