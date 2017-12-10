@@ -46,9 +46,9 @@
         <br>
         <h5 class="center black-text light">Simple way to set up applications in your computer.</h5>
         <div class="row center black-text">
-            <h5 class="header col s12 light"> Select applications -> Download and run script -> Go play outside </h5>
+            <h5 class="header col s12 light"> Select applications → Download and run script → Go play outside </h5>
         </div>
-        <p class="center-align">
+        <p class="center-align caption">
             This application is made to help you install apps and set things up in your computer.
             All you need to do is select the applications you want to install in your computer. This
             application will generate a bash script. You can run it in your computer using the command given below.
@@ -81,88 +81,99 @@
                 <div class="input-field col s12">
                     <i class="material-icons prefix">apps</i>
                     <input type="text" id="input-apps" class="autocomplete">
-                    <label for="input-apps">Software</label>
+                    <label for="input-apps">Select software</label>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
-    </div>
-    <div class="row center" id="download">
-        <a class="waves-effect waves-light btn tooltipped" data-position="top"
-           data-tooltip="Get script" onclick="getFile()">
-            Download
-            <i class="material-icons left">file_download</i>
-        </a>
-    </div>
-    <br>
-    <div class="row center">
-        <div>Execute the script &emsp;<a class="tooltipped" data-position="top" data-delay="600"
-                                     data-tooltip="Paste the following command in Terminal or Bash">?</a>
+    <div class="section" id="download">
+        <div class="row center">
+            <a class="waves-effect waves-light btn tooltipped" data-position="top"
+               data-tooltip="Get script" onclick="getFile()">
+                Download
+                <i class="material-icons left">file_download</i>
+            </a>
         </div>
-    </div>
-    <div class="row">
-        <div class="col s12 center-align flex-box language">
-                <span class=""> $<code style="max-width: 60%" class="language-markup code" id="run-command-box">
-                sh ~/Downloads/setthisup.sh</code>
-                    <a class="waves-effect btn tooltipped" data-position="top" data-tooltip="Copy command"><i
-                            class="material-icons postfix small" onclick="copyText()">content_copy</i></a>
-                </span>
+        <br>
+        <div class="center">
+            <div>Execute the script &emsp;<a class="tooltipped" data-position="top" data-delay="600"
+                                             data-tooltip="Paste the following command in Terminal or Bash">?</a>
+            </div>
         </div>
-        <div class="col s3">
+        <div class="row center">
+            <div class="col s12 m6 push-m2" style="">
+                <pre> $ <label for="run-command-box"></label><textarea
+                        style="height: 80%;  max-width: none; resize: none; vertical-align: middle; text-align: left"
+                        rows="1"
+                        onclick="copyText()"
+                        class="language-markup code"
+                        id="run-command-box">sh ~/Downloads/setthisup.sh</textarea>
+                </pre>
+            </div>
+            <div class="col s12 m2 push-m2"><a class="waves-effect btn tooltipped"
+                                               style="vertical-align: middle" data-position="top"
+                                               data-tooltip="Copy command">
+                <i class="material-icons postfix small" onselect="copyText()">content_copy</i>
+            </a>
+            </div>
         </div>
     </div>
 
-    <div class="row" id="share">
+    <div class="row section" id="share">
+        <h4 class="">Share</h4>
         <div class="divider"></div>
-        <div class="with-header">Share</div>
         <br>
-        <a class="twitter-share-button"
-           href="https://twitter.com/intent/tweet?text=The%20easy%20way%20to%20setup%20applications.&url=http://setthisup.org&button_hashtag=setthisup&ref_src=twsrc%5Etfw"
-           data-size="large">
-            Tweet</a>
-        <script async defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        <br>
-        <div id="fb-root"></div>
-        <div class="fb-share-button" data-href="http://setthisup.org/" data-layout="button_count" data-size="large"
-             data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank"
-                                           href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsetthisup.org%2F&amp;src=sdkpreparse">Share</a>
+        <div class="col s2 ">
+            <a class="twitter-share-button"
+               href="https://twitter.com/intent/tweet?text=The%20easy%20way%20to%20setup%20applications.&url=http://setthisup.org&button_hashtag=setthisup&ref_src=twsrc%5Etfw"
+               data-size="large">
+                Tweet</a>
+            <script async defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
-        <br>
-        <div class="g-plusone" data-size="tall"></div>
-        <br>
-        <script async defer src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
-        <script type="IN/Share" data-counter="right"></script>
-        <br>
-        <!-- Place this tag where you want the button to render. -->
-        <a class="github-button" href="https://github.com/gkvm/set-this-up" data-size="large" data-show-count="true"
-           aria-label="Star gkvm/set-this-up on GitHub">Star</a>
-        <br>
-        <!-- Place this tag where you want the button to render. -->
-        <a class="github-button" href="https://github.com/gkvm/set-this-up/fork" data-size="large"
-           data-show-count="true" aria-label="Fork gkvm/set-this-up on GitHub">Fork</a>
-        <br>
+
+        <div class="col s2">
+            <div class="fb-share-button" style="vertical-align: top" data-href="http://setthisup.org/"
+                 data-layout="button_count" data-size="large"
+                 data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank"
+                                               href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsetthisup.org%2F&amp;src=sdkpreparse">Share</a>
+            </div>
+        </div>
+        <div class="col s2">
+            <div class="g-plusone" data-size="tall"></div>
+        </div>
+        <div class="col s2">
+            <script async defer src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+            <script type="IN/Share" data-counter="right"></script>
+        </div>
+        <div class="col s2">
+            <!-- Place this tag where you want the button to render. -->
+            <a class="github-button" href="https://github.com/gkvm/set-this-up" data-size="large" data-show-count="true"
+               aria-label="Star gkvm/set-this-up on GitHub">Star</a>
+        </div>
+        <div class="col s2">
+            <!-- Place this tag where you want the button to render. -->
+            <a class="github-button" href="https://github.com/gkvm/set-this-up/fork" data-size="large"
+               data-show-count="true" aria-label="Fork gkvm/set-this-up on GitHub">Fork</a>
+        </div>
     </div>
 
-    <div class="row" id="contribute">
+    <div class="section" id="contribute">
+        <h4 class="subheader">Contribute</h4>
         <div class="divider"></div>
-        <div class="with-header">Contribute</div>
-        <div class="col light grey-text">
-            If you feel this application is useful and would like to contribute, you can submit the steps for installing
-            and
-            setting up applications using
-            <a class="btn btn-flat waves-effect waves-light" target="_blank"
-               href="https://docs.google.com/forms/d/e/1FAIpQLSfwDlvLuQLQ3pUsyd47zctHvXchsh4CN8dyz8TR7ZBQnQ4pDQ/viewform?usp=sf_link">FORM</a>.
-        </div>
-        <div class="col light grey-text">
-            You can view and verify complete data from
-            <a class="btn btn-flat waves-effect waves-light" target="_blank"
+        <div class="">
+            If you feel this application is useful and would like to contribute: <br>
+            ◦ You can submit the steps for installing and setting up applications using the
+            <a class="" target="_blank"
+               href="https://docs.google.com/forms/d/e/1FAIpQLSfwDlvLuQLQ3pUsyd47zctHvXchsh4CN8dyz8TR7ZBQnQ4pDQ/viewform?usp=sf_link">FORM</a>.<br>
+            ◦ You can view and verify complete data in
+            <a class="" target="_blank"
                href="https://docs.google.com/spreadsheets/d/1t5MBf9hsShJ7bAjHhPhSvM--fHeA4AmIqW1IuSJ6AUM/edit?usp=sharing">SHEET</a>
         </div>
     </div>
 
     <div class="divider"></div>
-    <div class="row">
+
+    <div class="section">
         <div id="disqus_thread"></div>
         <script>
 
@@ -210,17 +221,17 @@
     let dataList = [];
     let nameAndImageList = [];
 
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function () {
-            navigator.serviceWorker.register('worker.js').then(function (registration) {
-                // Registration was successful
-                console.log('ServiceWorker registration successful with scope: ', registration.scope);
-            }, function (err) {
-                // registration failed :(
-                console.log('ServiceWorker registration failed: ', err);
-            });
-        });
-    }
+    //    if ('serviceWorker' in navigator) {
+    //        window.addEventListener('load', function () {
+    //            navigator.serviceWorker.register('worker.js').then(function (registration) {
+    //                // Registration was successful
+    //                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    //            }, function (err) {
+    //                // registration failed :(
+    //                console.log('ServiceWorker registration failed: ', err);
+    //            });
+    //        });
+    //    }
 
     $(document).ready(function () {
 
