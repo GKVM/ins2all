@@ -100,20 +100,20 @@
                                              data-tooltip="Paste the following command in Terminal or Bash">?</a>
             </div>
         </div>
-        <div class="row center">
-            <div class="col s12 m6 push-m2" style="">
+        <div class="row center" style="vertical-align: middle">
+            <div class="col s12 m6 push-m2">
                 <pre> $ <label for="run-command-box"></label><textarea
-                        style="height: 80%;  max-width: none; resize: none; vertical-align: middle; text-align: left"
-                        rows="1"
+                        style="height: 80%;  max-width: 70%; resize: none; vertical-align: middle; text-align: left"
+                        rows="1" disabled
                         onclick="copyText()"
-                        class="language-markup code"
+                        class="language-markup code black-text"
                         id="run-command-box">sh ~/Downloads/setthisup.sh</textarea>
                 </pre>
             </div>
-            <div class="col s12 m2 push-m2"><a class="waves-effect btn tooltipped"
-                                               style="vertical-align: middle" data-position="top"
-                                               data-tooltip="Copy command">
-                <i class="material-icons postfix small" onselect="copyText()">content_copy</i>
+            <div class="col s12 m2 push-m2"><a class="btn waves-effect  tooltipped"
+                                               data-position="top"
+                                               data-tooltip="Copy command" onclick="copyText()">
+                <i class="material-icons postfix small">content_copy</i>
             </a>
             </div>
         </div>
@@ -221,17 +221,17 @@
     let dataList = [];
     let nameAndImageList = [];
 
-    //    if ('serviceWorker' in navigator) {
-    //        window.addEventListener('load', function () {
-    //            navigator.serviceWorker.register('worker.js').then(function (registration) {
-    //                // Registration was successful
-    //                console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    //            }, function (err) {
-    //                // registration failed :(
-    //                console.log('ServiceWorker registration failed: ', err);
-    //            });
-    //        });
-    //    }
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('worker.js').then(function (registration) {
+                    // Registration was successful
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function (err) {
+                    // registration failed :(
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
 
     $(document).ready(function () {
 
