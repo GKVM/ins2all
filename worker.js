@@ -4,7 +4,8 @@ var urlsToCache = [
     'css/materialize.css',
     'css/style.css',
     'js/set-it-up.js',
-    'js/materialize.min.js'
+    'js/materialize.min.js',
+    'https://fonts.googleapis.com/icon?family=Material+Icons'
 ];
 
 self.addEventListener('install', function(event) {
