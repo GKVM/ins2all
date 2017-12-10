@@ -97,19 +97,20 @@
     </div>
     <br>
     <div class="row center">
-        <div>run the command&emsp;<a class="tooltipped" data-position="top" data-delay="600"
+        <div>Execute the script &emsp;<a class="tooltipped" data-position="top" data-delay="600"
                                      data-tooltip="Paste the following command in Terminal or Bash">?</a>
         </div>
     </div>
     <div class="row center">
-        <div class="col s12 center language center">
-            <div>$
-                <code style="max-width: 60%" class="language-markup code"
-                      id="run-command-box">
-                    sh ~/Downloads/setthisup.sh</code>
-                <a class="waves-effect btn tooltipped" data-position="top" data-tooltip="Copy command"><i
-                        class="material-icons postfix small" onclick="copyText()">content_copy</i></a>
+        <div class="col s9 push-s1 m6 push-m2 center language center">
+            <div>
+                $<code style="max-width: 60%" class="language-markup code" id="run-command-box">
+                sh ~/Downloads/setthisup.sh</code>
             </div>
+        </div>
+        <div class="col s2">
+            <a class="waves-effect btn tooltipped" data-position="top" data-tooltip="Copy command"><i
+                    class="material-icons postfix small" onclick="copyText()">content_copy</i></a>
         </div>
     </div>
 
@@ -211,11 +212,11 @@
     let nameAndImageList = [];
 
     if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-            navigator.serviceWorker.register('worker.js').then(function(registration) {
+        window.addEventListener('load', function () {
+            navigator.serviceWorker.register('worker.js').then(function (registration) {
                 // Registration was successful
                 console.log('ServiceWorker registration successful with scope: ', registration.scope);
-            }, function(err) {
+            }, function (err) {
                 // registration failed :(
                 console.log('ServiceWorker registration failed: ', err);
             });
@@ -234,12 +235,16 @@
                 break;
             case "MacOS" :
                 getAppList('data/mac.json');
-                break;
+                break;/*
             case "Windows" :
                 getAppList('data/windows.json');
-                break;
+                break;*/
             default :
-                $('#extra-text').html(`<h3> ${OSName} is not supported yet.</h3>`);
+                $('#extra-text').html(`<pre class="center-align">
+${OSName} is not supported yet.
+Only works in Linux and MacOS now.
+Demo of how it works in Linux.
+ </pre>`);
                 getAppList('data/deb.json');
         }
 
