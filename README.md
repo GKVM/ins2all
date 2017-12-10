@@ -16,7 +16,7 @@ Steps:
 ## Data
 Verify data in <a href="https://docs.google.com/spreadsheets/d/1t5MBf9hsShJ7bAjHhPhSvM--fHeA4AmIqW1IuSJ6AUM/edit?usp=sharing">sheet</a>.
 <br>
-Inlude application installation command using <a href="https://docs.google.com/forms/d/e/1FAIpQLSfwDlvLuQLQ3pUsyd47zctHvXchsh4CN8dyz8TR7ZBQnQ4pDQ/viewform?usp=sf_link#start=invite">form</a>.
+Include application installation command using <a href="https://docs.google.com/forms/d/e/1FAIpQLSfwDlvLuQLQ3pUsyd47zctHvXchsh4CN8dyz8TR7ZBQnQ4pDQ/viewform?usp=sf_link#start=invite">form</a>.
 
 ## Contribution
 Please contribute for this project.<br>
