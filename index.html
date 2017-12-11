@@ -81,7 +81,7 @@
                 <div class="input-field col s12">
                     <i class="material-icons prefix">apps</i>
                     <input type="text" id="input-apps" class="autocomplete">
-                    <label for="input-apps">Select software</label>
+                    <label for="input-apps">Search software</label>
                 </div>
             </div>
         </div>
@@ -100,21 +100,29 @@
                                              data-tooltip="Paste the following command in Terminal or Bash">?</a>
             </div>
         </div>
-        <div class="row center" style="vertical-align: middle">
-            <div class="col s12 m6 push-m2">
-                <pre> $ <label for="run-command-box"></label><textarea
-                        style="height: 80%;  max-width: 70%; resize: none; vertical-align: middle; text-align: left"
-                        rows="1" disabled
-                        onclick="copyText()"
-                        class="language-markup code black-text"
-                        id="run-command-box">sh ~/Downloads/setthisup.sh</textarea>
-                </pre>
+        <div class="row center" style="padding-top: 20px">
+            <div class="col s12 center" style="display: flex; flex-wrap: wrap; justify-content: center">
+                <div style="padding-top: 6px">$</div>
+                <div style="padding-left: 10px; width: 60%">
+                    <label for="run-command-box"></label>
+                    <textarea
+                            style="height: 100%; resize: none; text-align: left;"
+                            rows="1" disabled
+                            onclick="copyText()"
+                            class="language-markup code black-text"
+                            id="run-command-box">sh ~/Downloads/setthisup.sh
+                    </textarea>
+                </div>
+                <div style="padding-left: 10px; vertical-align: top">
+                    <a class="btn waves-effect tooltipped"
+                       data-position="top"
+                       data-tooltip="Copy command" onclick="copyText()">
+                        <i class="material-icons postfix small">content_copy</i>
+                    </a>
+                </div>
             </div>
-            <div class="col s12 m2 push-m2"><a class="btn waves-effect  tooltipped"
-                                               data-position="top"
-                                               data-tooltip="Copy command" onclick="copyText()">
-                <i class="material-icons postfix small">content_copy</i>
-            </a>
+            <div class="col s12 m2 push-m1">
+
             </div>
         </div>
     </div>
@@ -123,37 +131,40 @@
         <h4 class="">Share</h4>
         <div class="divider"></div>
         <br>
-        <div class="col s2 ">
-            <a class="twitter-share-button"
-               href="https://twitter.com/intent/tweet?text=The%20easy%20way%20to%20setup%20applications.&url=http://setthisup.org&button_hashtag=setthisup&ref_src=twsrc%5Etfw"
-               data-size="large">
-                Tweet</a>
-            <script async defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-
-        <div class="col s2">
-            <div class="fb-share-button" style="vertical-align: top" data-href="http://setthisup.org/"
-                 data-layout="button_count" data-size="large"
-                 data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank"
-                                               href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsetthisup.org%2F&amp;src=sdkpreparse">Share</a>
+        <div class="col s12" style="display: flex; flex-wrap: wrap">
+            <div class="" style="margin: 4px">
+                <a class="twitter-share-button"
+                   href="https://twitter.com/intent/tweet?text=The%20easy%20way%20to%20setup%20applications.&url=http://setthisup.org&button_hashtag=setthisup&ref_src=twsrc%5Etfw"
+                   data-size="large">
+                    Tweet</a>
+                <script async defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
-        </div>
-        <div class="col s2">
-            <div class="g-plusone" data-size="tall"></div>
-        </div>
-        <div class="col s2">
-            <script async defer src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
-            <script type="IN/Share" data-counter="right"></script>
-        </div>
-        <div class="col s2">
-            <!-- Place this tag where you want the button to render. -->
-            <a class="github-button" href="https://github.com/gkvm/set-this-up" data-size="large" data-show-count="true"
-               aria-label="Star gkvm/set-this-up on GitHub">Star</a>
-        </div>
-        <div class="col s2">
-            <!-- Place this tag where you want the button to render. -->
-            <a class="github-button" href="https://github.com/gkvm/set-this-up/fork" data-size="large"
-               data-show-count="true" aria-label="Fork gkvm/set-this-up on GitHub">Fork</a>
+
+            <div class="" style="margin: 4px">
+                <div class="fb-share-button" style="vertical-align: top" data-href="http://setthisup.org/"
+                     data-layout="button_count" data-size="large"
+                     data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank"
+                                                   href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsetthisup.org%2F&amp;src=sdkpreparse">Share</a>
+                </div>
+            </div>
+            <div class="" style="margin: 4px">
+                <div class="g-plusone" data-size="tall"></div>
+            </div>
+            <div class="" style="margin: 4px">
+                <script async defer src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+                <script type="IN/Share" data-counter="right"></script>
+            </div>
+            <div class="" style="margin: 4px">
+                <!-- Place this tag where you want the button to render. -->
+                <a class="github-button" href="https://github.com/gkvm/set-this-up" data-size="large"
+                   data-show-count="true"
+                   aria-label="Star gkvm/set-this-up on GitHub">Star</a>
+            </div>
+            <div class="" style="margin: 4px">
+                <!-- Place this tag where you want the button to render. -->
+                <a class="github-button" href="https://github.com/gkvm/set-this-up/fork" data-size="large"
+                   data-show-count="true" aria-label="Fork gkvm/set-this-up on GitHub">Fork</a>
+            </div>
         </div>
     </div>
 
@@ -221,17 +232,17 @@
     let dataList = [];
     let nameAndImageList = [];
 
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function () {
-                navigator.serviceWorker.register('worker.js').then(function (registration) {
-                    // Registration was successful
-                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                }, function (err) {
-                    // registration failed :(
-                    console.log('ServiceWorker registration failed: ', err);
-                });
-            });
-        }
+    //        if ('serviceWorker' in navigator) {
+    //            window.addEventListener('load', function () {
+    //                navigator.serviceWorker.register('worker.js').then(function (registration) {
+    //                    // Registration was successful
+    //                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    //                }, function (err) {
+    //                    // registration failed :(
+    //                    console.log('ServiceWorker registration failed: ', err);
+    //                });
+    //            });
+    //        }
 
     $(document).ready(function () {
 
