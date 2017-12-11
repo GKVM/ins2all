@@ -48,28 +48,12 @@
     "commands": ""
   },
   {
-    "name": "Eclipse",
-    "web": "eclipse.org",
-    "image": "https://www.eclipse.org/artwork/images/v2/logo-800x188.png",
-    "category": "",
-    "description": "Eclipse is an integrated development environment used in computer programming, and is the most widely used Java IDE. It contains a base workspace and an extensible plug-in system for customizing the environment.",
-    "commands": ""
-  },
-  {
-    "name": "Gimp",
-    "web": "",
-    "image": "",
-    "category": "",
-    "description": "",
-    "commands": ""
-  },
-  {
     "name": "LibreOffice",
     "web": "libreoffice.org",
     "image": "https://tr1.cbsistatic.com/hub/i/r/2015/08/19/8a73bb60-e4ca-48d9-aa86-a5ea9a7fefef/resize/770x/35785983a484015f4d7bb864f239a3f3/libreofficehero.jpg",
     "category": "",
     "description": "LibreOffice is a free and open source office suite, a project of The Document Foundation. ",
-    "commands": ""
+    "commands": "sudo add-apt-repository ppa:libreoffice/ppa\nsudo apt update; sudo apt dist-upgrade\nsudo apt install libreoffice-gtk2 libreoffice-gnome"
   },
   {
     "name": "VLC",
@@ -118,5 +102,29 @@
     "category": "",
     "description": "System optimizer and monitor",
     "commands": "wget https://github.com/oguzhaninan/Stacer/releases/download/v1.0.4/Stacer_1.0.4_amd64.deb\nsudo dpkg --install Stacer_1.0.4_amd64.deb"
+  },
+  {
+    "name": "Spark",
+    "web": "spark.apache.org",
+    "image": "https://zeppelin.apache.org/assets/themes/zeppelin/img/spark_logo.jpg",
+    "category": " Cluster-computing framework",
+    "description": "Apache Spark is an open-source cluster-computing framework. Originally developed at the University of California, Berkeley's AMPLab, the Spark codebase was later donated to the Apache Software Foundation, which has maintained it since.",
+    "commands": "wget http://d3kbcqa49mib13.cloudfront.net/spark-2.0.2-bin-hadoop2.7.tgz\ntar -xvf spark-2.0.2-bin-hadoop2.7.tgz\ncp -rv spark-2.0.2-bin-hadoop2.7/* /opt/spark"
+  },
+  {
+    "name": "Ubuntu Extras",
+    "web": "",
+    "image": "",
+    "category": "",
+    "description": "",
+    "commands": "sudo apt-get install ubuntu-restricted-extras"
+  },
+  {
+    "name": "Skype",
+    "web": "web.skype.com/\n",
+    "image": "https://seeklogo.com/images/S/skype-logo-F4A7960445-seeklogo.com.png",
+    "category": "",
+    "description": "Skype is a telecommunications application software product that specializes in providing video chat and voice calls between computers, tablets, mobile devices, the Xbox One console, and smartwatches via the Internet and to regular telephones.",
+    "commands": "sudo apt-get install skype\n"
   }
 ]
