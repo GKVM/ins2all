@@ -133,7 +133,7 @@
     "image": "https://brandfolder.com/slack/logo/slack-primary-logo.png",
     "category": "Team collaboration tools",
     "description": "Slack is a cloud-based set of proprietary team collaboration tools and services, founded by Stewart Butterfield. Slack began as an internal tool used by their company, Tiny Speck, in the development of Glitch, a now defunct online game.",
-    "commands": "mkdir ~/setthisup\ncd ~/setthisup\nwget https://downloads.slack-edge.com/linux_releases/slack-desktop-3.0.0-amd64.deb\nsudo depkg -i slack*.deb"
+    "commands": "mkdir ~/setthisup\ncd ~/setthisup\nwget https://downloads.slack-edge.com/linux_releases/slack-desktop-3.0.0-amd64.deb\nsudo dpkg -i slack*.deb"
   },
   {
     "name": "VNC",
@@ -141,6 +141,6 @@
     "image": "",
     "category": "",
     "description": "VNC consists of a server and client application for the Virtual Network Computing protocol to control another computer's screen remotely.",
-    "commands": "mkdir ~/setthisup\ncd ~/setthisup\nwget https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.2.0-Linux-x64.deb\nsudo depkg -i VNC*.deb"
+    "commands": "mkdir ~/setthisup\ncd ~/setthisup\nwget https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.2.0-Linux-x64.deb\nsudo dpkg -i VNC*.deb"
   }
 ]
