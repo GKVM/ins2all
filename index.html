@@ -109,7 +109,7 @@
                     <label for="run-command-box"></label>
                     <textarea
                             style="height: 100%; resize: none; text-align: left;"
-                            rows="1"
+                            rows="1" disabled
                             onclick="copyText()"
                             class="language-markup code black-text"
                             id="run-command-box">sh ~/Downloads/setthisup.sh</textarea>
@@ -233,17 +233,17 @@
     let dataList = [];
     let nameAndImageList = [];
 
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function () {
-            navigator.serviceWorker.register('worker.js').then(function (registration) {
-                // Registration was successful
-                console.log('ServiceWorker registration successful with scope: ', registration.scope);
-            }, function (err) {
-                // registration failed :(
-                console.log('ServiceWorker registration failed: ', err);
-            });
-        });
-    }
+//    if ('serviceWorker' in navigator) {
+//        window.addEventListener('load', function () {
+//            navigator.serviceWorker.register('worker.js').then(function (registration) {
+//                // Registration was successful
+//                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+//            }, function (err) {
+//                // registration failed :(
+//                console.log('ServiceWorker registration failed: ', err);
+//            });
+//        });
+//    }
 
     $(document).ready(function () {
 
