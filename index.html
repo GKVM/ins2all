@@ -8,7 +8,7 @@
     <!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>SetThisUp | Setup applications in Linux and mac</title>
+    <title>Setup | Setup applications in Linux and mac</title>
     <meta name="description" content="Setup applications in Linux, Mac and Windows">
 
     <meta name="keywords"
@@ -16,11 +16,11 @@
            setup ubuntu, mac os, install chrome, install firefox, install vlc, how to install git, install apps in ubuntu.">
 
     <!-- Facebook Tags start -->
-    <meta property="og:title" content="SetThisUp - Setup applications in Linux and Mac">
+    <meta property="og:title" content="Setup - Setup applications in Linux and Mac">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://www.setthisup.org/">
-    <meta property="og:image" content="http://setthisup.org/images/screenshot.png">
-    <meta property="og:site_name" content="SetThisUp">
+    <meta property="og:url" content="http://www.setupxyz.com/">
+    <meta property="og:image" content="http://setupxyz.com/images/screenshot.png">
+    <meta property="og:site_name" content="Setup">
     <meta property="og:description"
           content="Application to help you install and set up applications and do other basic functionalities in your computer.">
 
@@ -36,7 +36,7 @@
 
     <link rel="icon" href="icons/image.png" type="image/png" sizes="16x16">
     <link rel="manifest" href="manifest.json">
-    <link rel="canonical" href="http://setthisup.org"/>
+    <link rel="canonical" href="https://setupxyz.com"/>
     <meta name="theme-color" content="#f4a442"/>
 </head>
 <body>
@@ -44,7 +44,7 @@
 <div class="section no-pad-bot" id="index-banner">
     <div class="container">
         <br><br>
-        <h1 class="header center orange-text">Set this up</h1>
+        <h1 class="header center orange-text">Setup</h1>
         <br>
         <h5 class="center black-text light">Simple way to set up applications in your computer.</h5>
         <div class="row center black-text">
@@ -112,7 +112,7 @@
                             rows="1" disabled
                             onclick="copyText()"
                             class="language-markup code black-text"
-                            id="run-command-box">sh ~/Downloads/setthisup.sh</textarea>
+                            id="run-command-box">sh ~/Downloads/setup.sh</textarea>
                 </div>
                 <div style="padding-left: 10px; vertical-align: top">
                     <a class="btn waves-effect tooltipped"
@@ -135,17 +135,17 @@
         <div class="col s12" style="display: flex; flex-wrap: wrap">
             <div class="" style="margin: 4px">
                 <a class="twitter-share-button"
-                   href="https://twitter.com/intent/tweet?text=The%20easy%20way%20to%20setup%20applications.&url=http://setthisup.org&button_hashtag=setthisup&ref_src=twsrc%5Etfw"
+                   href="https://twitter.com/intent/tweet?text=The%20easy%20way%20to%20setup%20applications.&url=http://setupxyz.com&button_hashtag=setup&ref_src=twsrc%5Etfw"
                    data-size="large">
                     Tweet</a>
                 <script async defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
 
             <div class="" style="margin: 4px">
-                <div class="fb-share-button" style="vertical-align: top" data-href="http://setthisup.org/"
+                <div class="fb-share-button" style="vertical-align: top" data-href="http://setupxyz.com"
                      data-layout="button_count" data-size="large"
                      data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank"
-                                                   href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsetthisup.org%2F&amp;src=sdkpreparse">Share</a>
+                                                   href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsetupxyz.com%2F&amp;src=sdkpreparse">Share</a>
                 </div>
             </div>
             <div class="" style="margin: 4px">
@@ -233,17 +233,17 @@
     let dataList = [];
     let nameAndImageList = [];
 
-//    if ('serviceWorker' in navigator) {
-//        window.addEventListener('load', function () {
-//            navigator.serviceWorker.register('worker.js').then(function (registration) {
-//                // Registration was successful
-//                console.log('ServiceWorker registration successful with scope: ', registration.scope);
-//            }, function (err) {
-//                // registration failed :(
-//                console.log('ServiceWorker registration failed: ', err);
-//            });
-//        });
-//    }
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+            navigator.serviceWorker.register('worker.js').then(function (registration) {
+                // Registration was successful
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function (err) {
+                // registration failed :(
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
 
     $(document).ready(function () {
 
