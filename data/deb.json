@@ -4,6 +4,7 @@
     "web": "google.com/chrome",
     "image": "https://lh3.googleusercontent.com/nYhPnY2I-e9rpqnid9u9aAODz4C04OycEGxqHG5vxFnA35OGmLMrrUmhM9eaHKJ7liB-=w300",
     "category": "Web browser",
+    "download": "",
     "description": "Google Chrome is a freeware web browser developed by Google. It was first released in September 2008, for Microsoft Windows, and was later ported to Linux, macOS, iOS and Android.",
     "commands": "wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - \nsudo sh -c 'echo \"deb http://dl.google.com/linux/chrome/deb/ stable main\" >> /etc/apt/sources.list.d/google.list'\nsudo apt-get update \nsudo apt-get install google-chrome-stable "
   },
@@ -12,118 +13,88 @@
     "web": "www.mozilla.org/en-US/firefox",
     "image": "https://botw-pd.s3.amazonaws.com/styles/logo-thumbnail/s3/082013/mozilla_firefox_2.png?itok=sweQlR0Y",
     "category": "Web browser",
+    "download": "",
     "description": "Mozilla Firefox is a free and open-source web browser developed by the Mozilla Foundation and its subsidiary the Mozilla Corporation.",
     "commands": "cd ~\nwget https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US\ntar zcPf ~/mozilla-backup-$(date +%s).tar.gz ~/.mozilla\njxf firefox*.tar.bz2 -C $HOME\n"
   },
   {
-    "name": "MongoDB",
-    "web": "mongodb.com",
-    "image": "https://avatars0.githubusercontent.com/u/45120?s=280&v=4",
-    "category": "",
-    "description": "MongoDB is a free and open-source cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schemas.",
-    "commands": "sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6\necho \"deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse\" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list\nsudo apt-get update\nsudo apt-get install -y mongodb-org"
-  },
-  {
-    "name": "Opera",
-    "web": "opera.com",
-    "image": "http://www-static.operacdn.com/static-heap/7f/7f022d3c6da5eeaa8b0e9d4aef828465121b6e4c/opera-browser-for-android.png",
-    "category": "Web browser",
-    "description": "Opera is a web browser for Windows, macOS, and Linux operating systems developed by Opera Software. It uses the Blink layout engine. An earlier version using the Presto layout engine is still available, and runs on FreeBSD systems.",
-    "commands": "sudo sh -c 'echo \"deb http://deb.opera.com/opera/ stable non-free\" >> /etc/apt/sources.list.d/opera.list'\nsudo sh -c 'wget -O - http://deb.opera.com/archive.key | apt-key add -'\nsudo apt-get update\nsudo apt-get install opera"
-  },
-  {
-    "name": "Signal",
-    "web": "signal.org",
-    "image": "https://signal.org/assets/header/logo-70556391d9e0f1642cf4ac8bafb3911db909aa3ca820e6d2dc412fa1cb509fa5.png",
-    "category": "",
-    "description": "Signal is an encrypted communications application for Android and iOS. It uses the Internet to send one-to-one and group messages, which can include files, voice notes, images and videos, and make one-to-one voice and video calls.",
-    "commands": "curl -s https://updates.signal.org/desktop/apt/keys.asc | sudo apt-key add - \necho \"deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main\" | sudo tee -a /etc/apt/sources.list.d/signal-xenial.list \nsudo apt update\nsudo apt install signal-desktop"
+    "name": "Gimp",
+    "web": "https://www.gimp.org/images/frontpage/wilber-big.png",
+    "image": "https://www.gimp.org",
+    "category": "Graphics tool",
+    "download": "https://www.gimp.org/downloads/",
+    "description": "GIMP is a free and open-source raster graphics editor used for image retouching and editing, free-form drawing, converting between different image formats, and more specialized tasks.",
+    "commands": "sudo apt install gimp"
   },
   {
     "name": "IntelliJ CE",
     "web": "jetbrains.com/idea/",
     "image": "https://seeklogo.com/images/I/intellij-idea-logo-F645E1F432-seeklogo.com.png",
     "category": "",
+    "download": "https://itsfoss.com/install-intellij-ubuntu-linux/",
     "description": "IntelliJ IDEA is a Java integrated development environment for developing computer software. It is developed by JetBrains, and is available as an Apache 2 Licensed community edition, and in a proprietary commercial edition.",
-    "commands": ""
+    "commands": "sudo add-apt-repository ppa:mmk2410/intellij-idea-community\nsudo apt-get update\nsudo apt-get install intellij-idea-community"
   },
   {
     "name": "LibreOffice",
     "web": "libreoffice.org",
     "image": "https://tr1.cbsistatic.com/hub/i/r/2015/08/19/8a73bb60-e4ca-48d9-aa86-a5ea9a7fefef/resize/770x/35785983a484015f4d7bb864f239a3f3/libreofficehero.jpg",
     "category": "",
+    "download": "",
     "description": "LibreOffice is a free and open source office suite, a project of The Document Foundation. ",
     "commands": "sudo add-apt-repository ppa:libreoffice/ppa\nsudo apt update; sudo apt dist-upgrade\nsudo apt install libreoffice-gtk2 libreoffice-gnome"
   },
   {
-    "name": "VLC",
-    "web": "videolan.org/vlc/",
-    "image": "https://images.videolan.org/images/icons-VLC/vlc.mini.svg",
+    "name": "MongoDB",
+    "web": "mongodb.com",
+    "image": "https://avatars0.githubusercontent.com/u/45120?s=280&v=4",
     "category": "",
-    "description": "VLC media player is a free and open-source, portable and cross-platform media player and streaming media server developed by the VideoLAN project.",
-    "commands": "sudo apt-get install libavcodec-extra-53\nsudo apt-get update\nsudo apt-get install vlc browser-plugin-vlc"
+    "download": "",
+    "description": "MongoDB is a free and open-source cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schemas.",
+    "commands": "sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6\necho \"deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse\" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list\nsudo apt-get update\nsudo apt-get install -y mongodb-org"
   },
   {
-    "name": "Unity tweak tools",
-    "web": "",
-    "image": "",
-    "category": "",
-    "description": "",
-    "commands": "sudo install unity-tweak-tool"
+    "name": "Node.js",
+    "web": "https://nodejs.org/",
+    "image": "https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png",
+    "category": "JavaScript Runtime Environment",
+    "download": "https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04",
+    "description": "Node.js is an open-source, cross-platform JavaScript run-time environment for executing JavaScript code server-side.",
+    "commands": "sudo apt-get update\nsudo apt-get install nodejs\nsudo apt-get install npm"
+  },
+  {
+    "name": "Opera",
+    "web": "opera.com",
+    "image": "http://www-static.operacdn.com/static-heap/7f/7f022d3c6da5eeaa8b0e9d4aef828465121b6e4c/opera-browser-for-android.png",
+    "category": "Web browser",
+    "download": "",
+    "description": "Opera is a web browser for Windows, macOS, and Linux operating systems developed by Opera Software. It uses the Blink layout engine. An earlier version using the Presto layout engine is still available, and runs on FreeBSD systems.",
+    "commands": "sudo sh -c 'echo \"deb http://deb.opera.com/opera/ stable non-free\" >> /etc/apt/sources.list.d/opera.list'\nsudo sh -c 'wget -O - http://deb.opera.com/archive.key | apt-key add -'\nsudo apt-get update\nsudo apt-get install opera"
   },
   {
     "name": "Shortcut",
     "web": "https://www.shotcut.org/",
     "image": "",
     "category": "video editor",
+    "download": "",
     "description": "",
     "commands": "snap install shotcut --classic"
   },
   {
-    "name": "Steam",
-    "web": "store.steampowered.com/",
-    "image": "https://www.google.co.in/imgres?imgurl=http://3.bp.blogspot.com/-Jbo2ByKvK60/VoFsdmqP4mI/AAAAAAAAIxk/Ahz__bJjweU/s1600/Logo%252BSteam.png&imgrefurl=http://logo-share.blogspot.com/2015/12/steam-logo.html&h=1067&w=1600&tbnid=LQTWWShCy8gZ1M:&tbnh=132&tbnw=198&usg=__sAs0EBs7Pyal0tWIwIwbO_iFp3o%3D&vet=1&docid=q8pDB1IDQ0b4iM&itg=1&sa=X&ved=0ahUKEwj89si2uPDXAhWMK48KHYTrB18Q_B0IogEwEg",
+    "name": "Signal",
+    "web": "signal.org",
+    "image": "https://signal.org/assets/header/logo-70556391d9e0f1642cf4ac8bafb3911db909aa3ca820e6d2dc412fa1cb509fa5.png",
     "category": "",
-    "description": "Steam is a digital distribution platform developed by Valve Corporation, which offers digital rights management, multiplayer gaming, video streaming and social networking services.",
-    "commands": "sudo add-apt-repository multiverse\nsudo apt-get install steam"
-  },
-  {
-    "name": "Visual Studio Code",
-    "web": "",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Visual_Studio_Code_0.10.1_icon.png",
-    "category": "",
-    "description": "Visual Studio Code is a source code editor developed by Microsoft for Windows, Linux and macOS. It includes support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring.",
-    "commands": "curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg\nsudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg\nsudo sh -c 'echo \"deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main\" > /etc/apt/sources.list.d/vscode.list'\nsudo apt-get install code"
-  },
-  {
-    "name": "Stacer",
-    "web": "",
-    "image": "",
-    "category": "",
-    "description": "System optimizer and monitor",
-    "commands": "wget https://github.com/oguzhaninan/Stacer/releases/download/v1.0.4/Stacer_1.0.4_amd64.deb\nsudo dpkg --install Stacer_1.0.4_amd64.deb"
-  },
-  {
-    "name": "Spark",
-    "web": "spark.apache.org",
-    "image": "https://zeppelin.apache.org/assets/themes/zeppelin/img/spark_logo.jpg",
-    "category": " Cluster-computing framework",
-    "description": "Apache Spark is an open-source cluster-computing framework. Originally developed at the University of California, Berkeley's AMPLab, the Spark codebase was later donated to the Apache Software Foundation, which has maintained it since.",
-    "commands": "wget http://d3kbcqa49mib13.cloudfront.net/spark-2.0.2-bin-hadoop2.7.tgz\ntar -xvf spark-2.0.2-bin-hadoop2.7.tgz\ncp -rv spark-2.0.2-bin-hadoop2.7/* /opt/spark"
-  },
-  {
-    "name": "Ubuntu Extras",
-    "web": "",
-    "image": "",
-    "category": "",
-    "description": "",
-    "commands": "sudo apt-get install ubuntu-restricted-extras"
+    "download": "",
+    "description": "Signal is an encrypted communications application for Android and iOS. It uses the Internet to send one-to-one and group messages, which can include files, voice notes, images and videos, and make one-to-one voice and video calls.",
+    "commands": "curl -s https://updates.signal.org/desktop/apt/keys.asc | sudo apt-key add - \necho \"deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main\" | sudo tee -a /etc/apt/sources.list.d/signal-xenial.list \nsudo apt update\nsudo apt install signal-desktop"
   },
   {
     "name": "Skype",
-    "web": "web.skype.com/\n",
+    "web": "web.skype.com/",
     "image": "https://seeklogo.com/images/S/skype-logo-F4A7960445-seeklogo.com.png",
     "category": "",
+    "download": "",
     "description": "Skype is a telecommunications application software product that specializes in providing video chat and voice calls between computers, tablets, mobile devices, the Xbox One console, and smartwatches via the Internet and to regular telephones.",
     "commands": "sudo apt-get install skype\n"
   },
@@ -132,15 +103,89 @@
     "web": "slack.com/",
     "image": "https://brandfolder.com/slack/logo/slack-primary-logo.png",
     "category": "Team collaboration tools",
+    "download": "",
     "description": "Slack is a cloud-based set of proprietary team collaboration tools and services, founded by Stewart Butterfield. Slack began as an internal tool used by their company, Tiny Speck, in the development of Glitch, a now defunct online game.",
     "commands": "mkdir ~/setthisup\ncd ~/setthisup\nwget https://downloads.slack-edge.com/linux_releases/slack-desktop-3.0.0-amd64.deb\nsudo dpkg -i slack*.deb"
+  },
+  {
+    "name": "Spark",
+    "web": "spark.apache.org",
+    "image": "https://zeppelin.apache.org/assets/themes/zeppelin/img/spark_logo.jpg",
+    "category": " Cluster-computing framework",
+    "download": "",
+    "description": "Apache Spark is an open-source cluster-computing framework. Originally developed at the University of California, Berkeley's AMPLab, the Spark codebase was later donated to the Apache Software Foundation, which has maintained it since.",
+    "commands": "wget http://d3kbcqa49mib13.cloudfront.net/spark-2.0.2-bin-hadoop2.7.tgz\ntar -xvf spark-2.0.2-bin-hadoop2.7.tgz\ncp -rv spark-2.0.2-bin-hadoop2.7/* /opt/spark"
+  },
+  {
+    "name": "Stacer",
+    "web": "",
+    "image": "",
+    "category": "",
+    "download": "",
+    "description": "System optimizer and monitor",
+    "commands": "wget https://github.com/oguzhaninan/Stacer/releases/download/v1.0.4/Stacer_1.0.4_amd64.deb\nsudo dpkg --install Stacer_1.0.4_amd64.deb"
+  },
+  {
+    "name": "Steam",
+    "web": "store.steampowered.com/",
+    "image": "https://www.google.co.in/imgres?imgurl=http://3.bp.blogspot.com/-Jbo2ByKvK60/VoFsdmqP4mI/AAAAAAAAIxk/Ahz__bJjweU/s1600/Logo%252BSteam.png&imgrefurl=http://logo-share.blogspot.com/2015/12/steam-logo.html&h=1067&w=1600&tbnid=LQTWWShCy8gZ1M:&tbnh=132&tbnw=198&usg=__sAs0EBs7Pyal0tWIwIwbO_iFp3o%3D&vet=1&docid=q8pDB1IDQ0b4iM&itg=1&sa=X&ved=0ahUKEwj89si2uPDXAhWMK48KHYTrB18Q_B0IogEwEg",
+    "category": "",
+    "download": "",
+    "description": "Steam is a digital distribution platform developed by Valve Corporation, which offers digital rights management, multiplayer gaming, video streaming and social networking services.",
+    "commands": "sudo add-apt-repository multiverse\nsudo apt-get install steam"
+  },
+  {
+    "name": "Ubuntu Extras",
+    "web": "",
+    "image": "",
+    "category": "",
+    "download": "",
+    "description": "",
+    "commands": "sudo apt-get install ubuntu-restricted-extras"
+  },
+  {
+    "name": "Unity tweak tools",
+    "web": "",
+    "image": "",
+    "category": "",
+    "download": "",
+    "description": "",
+    "commands": "sudo install unity-tweak-tool"
+  },
+  {
+    "name": "Visual Studio Code",
+    "web": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Visual_Studio_Code_0.10.1_icon.png",
+    "category": "",
+    "download": "",
+    "description": "Visual Studio Code is a source code editor developed by Microsoft for Windows, Linux and macOS. It includes support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring.",
+    "commands": "curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg\nsudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg\nsudo sh -c 'echo \"deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main\" > /etc/apt/sources.list.d/vscode.list'\nsudo apt-get install code"
+  },
+  {
+    "name": "VLC",
+    "web": "videolan.org/vlc/",
+    "image": "https://images.videolan.org/images/icons-VLC/vlc.mini.svg",
+    "category": "",
+    "download": "",
+    "description": "VLC media player is a free and open-source, portable and cross-platform media player and streaming media server developed by the VideoLAN project.",
+    "commands": "sudo apt-get install libavcodec-extra-53\nsudo apt-get update\nsudo apt-get install vlc browser-plugin-vlc"
   },
   {
     "name": "VNC",
     "web": "realvnc.com/",
     "image": "",
     "category": "",
+    "download": "",
     "description": "VNC consists of a server and client application for the Virtual Network Computing protocol to control another computer's screen remotely.",
     "commands": "mkdir ~/setthisup\ncd ~/setthisup\nwget https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.2.0-Linux-x64.deb\nsudo dpkg -i VNC*.deb"
+  },
+  {
+    "name": "Docker",
+    "web": "https://www.docker.com/",
+    "image": "https://newrelic.com/assets/partners/docker/vector_docker-whale.svg",
+    "category": "",
+    "download": "",
+    "description": "Docker is a software technology providing containers, promoted by the company Docker, Inc. Docker provides an additional layer of abstraction and automation of operating-system-level virtualization on Windows and Linux.",
+    "commands": "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -\nsudo add-apt-repository \"deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable\"\nsudo apt-get update\napt-cache policy docker-ce\nsudo apt-get install -y docker-ce\nsudo systemctl status docker"
   }
 ]
