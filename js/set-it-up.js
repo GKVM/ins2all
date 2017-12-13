@@ -58,7 +58,7 @@ function addToList(applicationName) {
     }
 
     divElement.setAttribute('class', 'collection-item avatar hoverable');
-    divElement.setAttribute('id', selectedApp.name);
+    divElement.setAttribute('id', selectedApp.name.replace(/ /g,'-'));
     divElement.innerHTML =
         `<img src='${selectedApp.image}' alt="" class="responsive-img circle">
             <span class="title">${selectedApp.name}</span>
@@ -66,7 +66,9 @@ function addToList(applicationName) {
             ${(selectedApp.category !== undefined && selectedApp.category !== "") ? selectedApp.category + '<br>' : ""}
             ${selectedApp.description !== undefined ? selectedApp.description : ""}</p>
             <a href="javascript:;" class="secondary-content"><i class="material-icons">gradey</i></a>
-            <a href="javascript:;" onclick="deleteFromList('${selectedApp.name}')" class="secondary-content">
+            <a href="javascript:;" onclick="
+            $(\`#${selectedApp.name.replace(/ /g, "-")}\`).remove();
+            deleteFromList('${selectedApp.name}')" class="secondary-content">
             <i class="material-icons">close</i></a>`;
 
     console.log("Add item to list");
@@ -82,7 +84,6 @@ function addToList(applicationName) {
 }
 
 function deleteFromList(applicationName) {
-    $(`#${applicationName}`).remove();
 
     for (let i = 0; i < dataList.length; i++) {
         if (dataList[i].name === applicationName) {
