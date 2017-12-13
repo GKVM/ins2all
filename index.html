@@ -30,7 +30,7 @@
     <title>SetThisUp - Open source tool to setup your computer.</title>
 
     <!-- CSS  -->
-    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -204,7 +204,7 @@
             })();
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered
-            by
+            <by></by>
             Disqus.</a></noscript>
     </div>
 </div>
@@ -233,17 +233,17 @@
     let dataList = [];
     let nameAndImageList = [];
 
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function () {
-            navigator.serviceWorker.register('worker.js').then(function (registration) {
-                // Registration was successful
-                console.log('ServiceWorker registration successful with scope: ', registration.scope);
-            }, function (err) {
-                // registration failed :(
-                console.log('ServiceWorker registration failed: ', err);
-            });
-        });
-    }
+//    if ('serviceWorker' in navigator) {
+//        window.addEventListener('load', function () {
+//            navigator.serviceWorker.register('worker.js').then(function (registration) {
+//                // Registration was successful
+//                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+//            }, function (err) {
+//                // registration failed :(
+//                console.log('ServiceWorker registration failed: ', err);
+//            });
+//        });
+//    }
 
     $(document).ready(function () {
 
