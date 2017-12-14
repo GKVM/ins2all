@@ -230,49 +230,47 @@
 <script src="js/materialize.min.js"></script>
 <script>
 
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+            navigator.serviceWorker.register('worker.js').then(function (registration) {
+                // Registration was successful
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function (err) {
+                // registration failed :(
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
+
     let dataList = [];
     let nameAndImageList = [];
 
-//    if ('serviceWorker' in navigator) {
-//        window.addEventListener('load', function () {
-//            navigator.serviceWorker.register('worker.js').then(function (registration) {
-//                // Registration was successful
-//                console.log('ServiceWorker registration successful with scope: ', registration.scope);
-//            }, function (err) {
-//                // registration failed :(
-//                console.log('ServiceWorker registration failed: ', err);
-//            });
-//        });
-//    }
-
     $(document).ready(function () {
+        $('.tooltipped').tooltip();
+    });
 
-        let OSName = getOS();
+    let OSName = getOS();
 
-        console.log(OSName);
-        $('#os-div').html(OSName);
-        switch (OSName) {
-            case "Linux" :
-                getAppList('data/deb.json');
-                break;
-            case "MacOS" :
-                getAppList('data/mac.json');
-                break;/*
+    console.log(OSName);
+    $('#os-div').html(OSName);
+    switch (OSName) {
+        case "Linux" :
+            getAppList('data/deb.json');
+            break;
+        case "MacOS" :
+            getAppList('data/mac.json');
+            break;/*
             case "Windows" :
                 getAppList('data/windows.json');
                 break;*/
-            default :
-                $('#extra-text').html(`<pre class="center-align">
+        default :
+            $('#extra-text').html(`<pre class="center-align">
 ${OSName} is not supported yet.
 Only works in Linux and MacOS now.
 Demo of how it works in Linux.
  </pre>`);
-                getAppList('data/deb.json');
-        }
-
-        $('.tooltipped').tooltip();
-
-    });
+            getAppList('data/deb.json');
+    }
 
     function getAppList(path) {
         $.getJSON(path, function (data) {
