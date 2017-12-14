@@ -5,7 +5,6 @@ var urlsToCache = [
     'css/style.css',
     'js/set-it-up.js',
     'js/materialize.min.js',
-    'data/deb.json',
     'https://fonts.googleapis.com/icon?family=Material+Icons'
 ];
 
