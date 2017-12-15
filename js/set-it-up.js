@@ -45,44 +45,6 @@ function getFile() {
     document.body.removeChild(element);
 }
 
-function addToList(applicationName) {
-    let divElement = document.createElement("li");
-
-    let selectedApp;
-
-    for (let i = 0; i < dataList.length; i++) {
-        if (dataList[i].name === applicationName) {
-            selectedApp = dataList[i];
-            break;
-        }
-    }
-
-    divElement.setAttribute('class', 'collection-item avatar hoverable');
-    divElement.setAttribute('id', selectedApp.name.replace(/ /g,'-'));
-    divElement.innerHTML =
-        `<img src='${selectedApp.image}' alt="" class="responsive-img circle">
-            <span class="title">${selectedApp.name}</span>
-            <p class="light">
-            ${(selectedApp.category !== undefined && selectedApp.category !== "") ? selectedApp.category + '<br>' : ""}
-            ${selectedApp.description !== undefined ? selectedApp.description : ""}</p>
-            <a href="javascript:;" class="secondary-content"><i class="material-icons">gradey</i></a>
-            <a href="javascript:;" onclick="
-            $(\`#${selectedApp.name.replace(/ /g, "-")}\`).remove();
-            deleteFromList('${selectedApp.name}')" class="secondary-content">
-            <i class="material-icons">close</i></a>`;
-
-    console.log("Add item to list");
-    applicationSelectionElement.appendChild(divElement);
-    selectedApps.push(selectedApp);
-
-    delete nameAndImageList[applicationName];
-
-    valText.value = "";
-    valText.focus();
-
-    $('.dropdown-trigger').dropdown();
-}
-
 function deleteFromList(applicationName) {
 
     for (let i = 0; i < dataList.length; i++) {
