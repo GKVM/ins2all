@@ -1,5 +1,8 @@
 var CACHE_NAME = 'setthisup-site-cache-v1';
 var urlsToCache = [
+    '/',
+    'index.html',
+    'set-it-up.js',
     'css/materialize.css',
     'css/style.css',
     'js/materialize.min.js',
