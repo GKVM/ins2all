@@ -1,6 +1,7 @@
 {
-  "short_name": "Set this up",
-  "name": "Set this up",
+  "short_name": "ins2all",
+  "name": "ins2all",
+  "description" : "Application to help you install applications.",
   "icons": [
     {
       "src": "/images/image-192x192.png",
@@ -23,9 +24,9 @@
       "type": "image/png"
     }
   ],
-  "start_url": "setthisup.com",
+  "start_url": "index.html",
   "background_color": "#f4a442",
   "theme_color": "#f4a442",
   "orientation": "portrait",
-  "display": "browser"
+  "display": "standalone"
 }
