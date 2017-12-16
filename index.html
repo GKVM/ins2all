@@ -198,14 +198,15 @@
             this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
             };
             */
-            (function() { // DON'T EDIT BELOW THIS LINE
+            (function () { // DON'T EDIT BELOW THIS LINE
                 var d = document, s = d.createElement('script');
                 s.src = 'https://http-setitup-xyz.disqus.com/embed.js';
                 s.setAttribute('data-timestamp', +new Date());
                 (d.head || d.body).appendChild(s);
             })();
         </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
     </div>
 </div>
 
@@ -287,8 +288,20 @@ Demo of how it works in Linux.
                 limit: 6,
                 //minLength: 4
             });
-            addToList('Chrome');
-            addToList('VLC');
+
+            let args = getParameterByName('a');
+            console.log(args);
+            if (args === undefined) {
+                addToList('Chrome');
+                addToList('VLC');
+            } else {
+                args.split(',').forEach(
+                    function f(v) {
+                        addToList(v.replace(/_/g,' '));
+                        console.log(v);
+                    }
+                )
+            }
         });
     }
 
@@ -314,6 +327,16 @@ Demo of how it works in Linux.
         return os;
     }
 
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        let regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
     function addToList(applicationName) {
         let divElement = document.createElement("li");
 
@@ -327,7 +350,7 @@ Demo of how it works in Linux.
         }
 
         divElement.setAttribute('class', 'collection-item avatar hoverable');
-        divElement.setAttribute('id', selectedApp.name.replace(/ /g,'-'));
+        divElement.setAttribute('id', selectedApp.name.replace(/ /g, '-'));
         divElement.innerHTML =
             `<img src='${selectedApp.image}' alt="" class="responsive-img circle">
             <span class="title">${selectedApp.name}</span>
