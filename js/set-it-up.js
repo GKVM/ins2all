@@ -3,7 +3,7 @@ const applicationSelectionElement = document.getElementById("selected-apps");
 const valText = document.getElementById("input-apps");
 const runCommandBox = document.getElementById("run-command-box");
 let selectedApps = [];
-let fileName = "setup-default.sh";
+let fileName = "ins2all-default.sh";
 
 function getFile() {
     let script = "#!/bin/bash\n\n";
@@ -32,7 +32,7 @@ function getFile() {
             .concat(postUpdateCommand[i].post_update);
     }
 
-    fileName = `setup-${Number.parseInt(Math.random() * 10000)}.sh`;
+    fileName = `ins2all-${Number.parseInt(Math.random() * 10000)}.sh`;
     runCommandBox.textContent = "sh ~/Downloads/" + fileName;
 
     let element = document.createElement('a');
