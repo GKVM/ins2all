@@ -1,9 +1,7 @@
 var CACHE_NAME = 'setthisup-site-cache-v1';
 var urlsToCache = [
-    '/',
     'css/materialize.css',
     'css/style.css',
-    'js/set-it-up.js',
     'js/materialize.min.js',
     'https://fonts.googleapis.com/icon?family=Material+Icons'
 ];
