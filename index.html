@@ -192,12 +192,10 @@
             /**
              *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
              *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-            /*
             var disqus_config = function () {
-            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            this.page.url = "https://www.ins2all.com";  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ""; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
             };
-            */
             (function () { // DON'T EDIT BELOW THIS LINE
                 var d = document, s = d.createElement('script');
                 s.src = 'https://http-setitup-xyz.disqus.com/embed.js';
@@ -231,17 +229,17 @@
 <script src="js/materialize.min.js"></script>
 <script>
 
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function () {
-            navigator.serviceWorker.register('worker.js').then(function (registration) {
-                // Registration was successful
-                console.log('ServiceWorker registration successful with scope: ', registration.scope);
-            }, function (err) {
-                // registration failed :(
-                console.log('ServiceWorker registration failed: ', err);
-            });
-        });
-    }
+//    if ('serviceWorker' in navigator) {
+//        window.addEventListener('load', function () {
+//            navigator.serviceWorker.register('worker.js').then(function (registration) {
+//                // Registration was successful
+//                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+//            }, function (err) {
+//                // registration failed :(
+//                console.log('ServiceWorker registration failed: ', err);
+//            });
+//        });
+//    }
 
     let dataList = [];
     let nameAndImageList = [];
@@ -409,6 +407,6 @@ Demo of how it works in Linux.
     gtag('config', 'UA-110539600-1');
 </script>
 
-<script id="dsq-count-scr" async defer src="//http-setitup-xyz.disqus.com/count.js"></script>
+<script id="dsq-count-scr" async defer src="https://http-setitup-xyz.disqus.com/count.js"></script>
 </body>
 </html>
