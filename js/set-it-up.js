@@ -1,11 +1,12 @@
-
 const applicationSelectionElement = document.getElementById("selected-apps");
 const valText = document.getElementById("input-apps");
 const runCommandBox = document.getElementById("run-command-box");
+const modalText = document.getElementById("script-modal");
 let selectedApps = [];
 let fileName = "ins2all-default.sh";
 
-function getFile() {
+
+function generateScript() {
     let script = "#!/bin/bash\n\n";
     let postUpdateCommand = [];
 
@@ -31,7 +32,11 @@ function getFile() {
             .concat("\n\n#Installing " + postUpdateCommand[i].name + "")
             .concat(postUpdateCommand[i].post_update);
     }
+    return script;
+}
 
+function getFile() {
+    let script = generateScript();
     fileName = `ins2all-${Number.parseInt(Math.random() * 10000)}.sh`;
     runCommandBox.textContent = "sh ~/Downloads/" + fileName;
 
@@ -43,6 +48,11 @@ function getFile() {
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
+}
+
+function showModal() {
+    modalText.innerText = generateScript();
+    $('#modal').modal('open')
 }
 
 function deleteFromList(applicationName) {

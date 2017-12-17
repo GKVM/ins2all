@@ -89,12 +89,16 @@
         </div>
     </div>
     <div class="section" id="download">
+
         <div class="row center">
             <a class="waves-effect waves-light btn tooltipped" data-position="top"
                data-tooltip="Get script" onclick="getFile()">
                 Download
                 <i class="material-icons left">file_download</i>
             </a>
+
+            <a class="waves-effect waves-light btn modal-trigger btn-flatbtn tooltipped" data-position="top"
+               data-tooltip="Show script" onclick="showModal()"><i class="material-icons">launch</i></a>
         </div>
         <br>
         <div class="center">
@@ -166,6 +170,17 @@
                 <a class="github-button" href="https://github.com/gkvm/set-this-up/fork" data-size="large"
                    data-show-count="true" aria-label="Fork gkvm/set-this-up on GitHub">Fork</a>
             </div>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Installation script</h4>
+            <p id="script-modal">#!/bin/bash</p>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:" class="modal-action modal-close waves-effect waves-green btn-flat ">OK</a>
         </div>
     </div>
 
@@ -245,6 +260,7 @@
     let nameAndImageList = [];
 
     $(document).ready(function () {
+        $('.modal').modal();
         $('.tooltipped').tooltip();
     });
 
