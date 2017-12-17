@@ -52,13 +52,13 @@
         </div>
         <p class="center-align caption">
             This application is made to help you install apps and set things up on your computer.
-            All you need to do is select the applications you want to install on your computer. This
-            application will generate a bash script. You can run it in your computer using the command given below.
+            All you need to do is select the applications you want to install on your computer. It will generate a bash
+            script. You can run it on your computer using the command given below.
             That should install and setup applications.
 
-            This is an open source project. If the application you want is not present, please mention it in the
-            comments.
-            The source code is hosted here. Please feel free to contribute to this project.
+            This is an open source project. This application is hosted using GitHub Pages.
+            There is no backend. All data used is fetched from GitHub.
+            If the application you want is not present, please mention it in the comments.
         </p>
         <div id="os-div" class="center badge light"></div>
         <div id="extra-text" class="row center"></div>
@@ -297,7 +297,7 @@ Demo of how it works in Linux.
             } else {
                 args.split(',').forEach(
                     function f(v) {
-                        addToList(v.replace(/_/g,' '));
+                        addToList(v.replace(/_/g, ' '));
                         console.log(v);
                     }
                 )
