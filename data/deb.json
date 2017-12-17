@@ -9,6 +9,15 @@
     "commands": "wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - \nsudo sh -c 'echo \"deb http://dl.google.com/linux/chrome/deb/ stable main\" >> /etc/apt/sources.list.d/google.list'\nsudo apt-get update \nsudo apt-get install google-chrome-stable "
   },
   {
+    "name": "Docker",
+    "web": "https://www.docker.com/",
+    "image": "https://newrelic.com/assets/partners/docker/vector_docker-whale.svg",
+    "category": "",
+    "download": "",
+    "description": "Docker is a software technology providing containers, promoted by the company Docker, Inc. Docker provides an additional layer of abstraction and automation of operating-system-level virtualization on Windows and Linux.",
+    "commands": "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -\nsudo add-apt-repository \"deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable\"\nsudo apt-get update\napt-cache policy docker-ce\nsudo apt-get install -y docker-ce\nsudo systemctl status docker"
+  },
+  {
     "name": "Firefox",
     "web": "www.mozilla.org/en-US/firefox",
     "image": "https://botw-pd.s3.amazonaws.com/styles/logo-thumbnail/s3/082013/mozilla_firefox_2.png?itok=sweQlR0Y",
@@ -16,6 +25,15 @@
     "download": "",
     "description": "Mozilla Firefox is a free and open-source web browser developed by the Mozilla Foundation and its subsidiary the Mozilla Corporation.",
     "commands": "cd ~\nwget https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US\ntar zcPf ~/mozilla-backup-$(date +%s).tar.gz ~/.mozilla\njxf firefox*.tar.bz2 -C $HOME\n"
+  },
+  {
+    "name": "Firefox ESR",
+    "web": "https://www.mozilla.org/en-US/firefox/organizations/",
+    "image": "https://botw-pd.s3.amazonaws.com/styles/logo-thumbnail/s3/082013/mozilla_firefox_2.png?itok=sweQlR0Y",
+    "category": "Web browser",
+    "download": "",
+    "description": "Firefox ESR is intended for groups who deploy and maintain the desktop environment in large organizations such as universities and other schools, county or city governments and businesses.",
+    "commands": "sudo add-apt-repository ppa:jonathonf/firefox-esr\nsudo apt-get update\nsudo apt-get install firefox-esr"
   },
   {
     "name": "Gimp",
@@ -178,14 +196,5 @@
     "download": "",
     "description": "VNC consists of a server and client application for the Virtual Network Computing protocol to control another computer's screen remotely.",
     "commands": "mkdir ~/setthisup\ncd ~/setthisup\nwget https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.2.0-Linux-x64.deb\nsudo dpkg -i VNC*.deb"
-  },
-  {
-    "name": "Docker",
-    "web": "https://www.docker.com/",
-    "image": "https://newrelic.com/assets/partners/docker/vector_docker-whale.svg",
-    "category": "",
-    "download": "",
-    "description": "Docker is a software technology providing containers, promoted by the company Docker, Inc. Docker provides an additional layer of abstraction and automation of operating-system-level virtualization on Windows and Linux.",
-    "commands": "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -\nsudo add-apt-repository \"deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable\"\nsudo apt-get update\napt-cache policy docker-ce\nsudo apt-get install -y docker-ce\nsudo systemctl status docker"
   }
 ]
