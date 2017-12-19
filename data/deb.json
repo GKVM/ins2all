@@ -153,6 +153,30 @@
     "commands": "sudo add-apt-repository multiverse\nsudo apt-get install steam"
   },
   {
+    "name": "Java Development Kit",
+    "os": "deb",
+    "web": "java.com",
+    "image": "https://sdtimes.com/wp-content/uploads/2015/10/1026.sdt-javaone.png",
+    "description": "Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible.",
+    "commands": "sudo apt-get update\nsudo apt-get install default-jdk"
+  },
+  {
+    "name": "Oracle Java Development Kit 8",
+    "os": "deb",
+    "web": "java.com",
+    "image": "https://sdtimes.com/wp-content/uploads/2015/10/1026.sdt-javaone.png",
+    "description": "Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible.",
+    "commands": "sudo apt-get update\nsudo apt-get install oracle-java8-installer"
+  },
+  {
+    "name": "Oracle Java Development Kit 9",
+    "os": "deb",
+    "web": "java.com",
+    "image": "https://sdtimes.com/wp-content/uploads/2015/10/1026.sdt-javaone.png",
+    "description": "Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible.",
+    "commands": "sudo apt-get update\nsudo apt-get install oracle-java9-installer"
+  },
+  {
     "name": "Ubuntu Extras",
     "web": "",
     "image": "",
