@@ -204,6 +204,33 @@
     "commands": "sudo apt-get install ubuntu-restricted-extras"
   },
   {
+    "name": "Git",
+    "web": "https://git-scm.com/",
+    "image": "http://gitforwindows.org/img/git_logo.png",
+    "category": "Version control software",
+    "download": "",
+    "description": "Git is a version control system for tracking changes in computer files and coordinating work on those files among multiple people.",
+    "commands": "sudo apt-get install git\n"
+  },
+  {
+    "name": "Scala",
+    "web": "http://www.scala-lang.org",
+    "image": "https://www.scala-lang.org/resources/img/frontpage/scala-spiral.png",
+    "category": "Programming language",
+    "download": "",
+    "description": "Scala is a general-purpose programming language providing support for functional programming and a strong static type system. Designed to be concise, many of Scala's design decisions aimed to address criticisms of Java.",
+    "commands": "wget www.scala-lang.org/files/archive/scala-2.11.7.deb\nsudo dpkg -i scala-2.11.7.deb"
+  },
+  {
+    "name": "Python",
+    "web": "www.python.org/",
+    "image": "https://www.python.org/static/opengraph-icon-200x200.png",
+    "category": "Programming language",
+    "download": "",
+    "description": "Python is a widely used high-level programming language for general-purpose programming, created by Guido van Rossum and first released in 1991.",
+    "commands": "sudo add-apt-repository ppa:jonathonf/python-3.6\nsudo apt-get update\nsudo apt-get install python3.6\n"
+  },
+  {
     "name": "Unity tweak tools",
     "web": "",
     "image": "",
