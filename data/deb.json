@@ -1,5 +1,14 @@
 [
   {
+    "name": "Atom",
+    "web": "https://atom.io/",
+    "image": "https://discourse-cdn-sjc1.com/business/uploads/github_atom/490/d8548f4ce56f1599.png",
+    "category": "development",
+    "download": "https://atom.io/download/deb",
+    "description": "Atom is a text editor that's modern, approachable, yet hackable to the core—a tool you can customize to do anything but also use productively without ever touching a config file.",
+    "commands": "sudo add-apt-repository ppa:webupd8team/atom\nsudo apt update\nsudo apt install atom"
+  },
+  {
     "name": "Chrome",
     "web": "google.com/chrome",
     "image": "https://lh3.googleusercontent.com/nYhPnY2I-e9rpqnid9u9aAODz4C04OycEGxqHG5vxFnA35OGmLMrrUmhM9eaHKJ7liB-=w300",
@@ -7,6 +16,15 @@
     "download": "",
     "description": "Google Chrome is a freeware web browser developed by Google. It was first released in September 2008, for Microsoft Windows, and was later ported to Linux, macOS, iOS and Android.",
     "commands": "wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - \nsudo sh -c 'echo \"deb http://dl.google.com/linux/chrome/deb/ stable main\" >> /etc/apt/sources.list.d/google.list'\nsudo apt-get update \nsudo apt-get install google-chrome-stable "
+  },
+  {
+    "name": "Chromium Browser",
+    "web": "https://www.chromium.org",
+    "image": "https://www.chromium.org/_/rsrc/1438879449147/config/customLogo.gif?revision=3",
+    "category": "Browser",
+    "download": "https://www.chromium.org/getting-involved/download-chromium",
+    "description": "Chromium is an open-source Web browser project started by Google, to provide the source code for the proprietary Google Chrome browser.",
+    "commands": "sudo apt update\nsudo apt install chromium-browser"
   },
   {
     "name": "Docker",
@@ -36,6 +54,15 @@
     "commands": "sudo add-apt-repository ppa:jonathonf/firefox-esr\nsudo apt-get update\nsudo apt-get install firefox-esr"
   },
   {
+    "name": "Geary",
+    "web": "https://wiki.gnome.org/Apps/Geary",
+    "image": "",
+    "category": "",
+    "download": "",
+    "description": "Geary is a free and open-source email client written in Vala, which is based on WebKitGTK+. Although since adopted by the GNOME project, the project originally was developed by the Yorba Foundation.",
+    "commands": "sudo add-apt-repository ppa:yorba/ppa\nsudo apt-get update\nsudo apt-get install geary"
+  },
+  {
     "name": "Gimp",
     "web": "https://www.gimp.org/images/frontpage/wilber-big.png",
     "image": "https://www.gimp.org",
@@ -45,6 +72,15 @@
     "commands": "sudo apt install gimp"
   },
   {
+    "name": "Git",
+    "web": "https://git-scm.com/",
+    "image": "http://gitforwindows.org/img/git_logo.png",
+    "category": "Version control software",
+    "download": "",
+    "description": "Git is a version control system for tracking changes in computer files and coordinating work on those files among multiple people.",
+    "commands": "sudo apt-get install git\n"
+  },
+  {
     "name": "IntelliJ CE",
     "web": "jetbrains.com/idea/",
     "image": "https://seeklogo.com/images/I/intellij-idea-logo-F645E1F432-seeklogo.com.png",
@@ -52,6 +88,15 @@
     "download": "https://itsfoss.com/install-intellij-ubuntu-linux/",
     "description": "IntelliJ IDEA is a Java integrated development environment for developing computer software. It is developed by JetBrains, and is available as an Apache 2 Licensed community edition, and in a proprietary commercial edition.",
     "commands": "sudo add-apt-repository ppa:mmk2410/intellij-idea-community\nsudo apt-get update\nsudo apt-get install intellij-idea-community"
+  },
+  {
+    "name": "Java Development Kit (JDK)",
+    "web": "java.com",
+    "image": "https://sdtimes.com/wp-content/uploads/2015/10/1026.sdt-javaone.png",
+    "category": "",
+    "download": "",
+    "description": "Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible.",
+    "commands": "sudo apt-get update\\nsudo apt-get install default-jdk"
   },
   {
     "name": "LibreOffice",
@@ -72,6 +117,15 @@
     "commands": "sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6\necho \"deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse\" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list\nsudo apt-get update\nsudo apt-get install -y mongodb-org"
   },
   {
+    "name": "MPV Media Player",
+    "web": "https://mpv.io/",
+    "image": "https://mpv.io/images/mpv-logo-128-0baae5aa.png",
+    "category": "Media player",
+    "download": "https://mpv.io/installation/",
+    "description": "mpv is media player software, based on MPlayer and mplayer2. It is free and open-source software released under a mix of licenses including GNU General Public License version 2 or later (GPLv2+), with parts under GNU Lesser Public License version 2.1 or later (LGPLv2.1+), and some optional parts under GNU General Public License version 3 (GPLv3).",
+    "commands": "sudo add-apt-repository ppa:mc3man/mpv-tests\nsudo apt update && sudo apt install mpv"
+  },
+  {
     "name": "Node.js",
     "web": "https://nodejs.org/",
     "image": "https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png",
@@ -88,6 +142,42 @@
     "download": "",
     "description": "Opera is a web browser for Windows, macOS, and Linux operating systems developed by Opera Software. It uses the Blink layout engine. An earlier version using the Presto layout engine is still available, and runs on FreeBSD systems.",
     "commands": "sudo sh -c 'echo \"deb http://deb.opera.com/opera/ stable non-free\" >> /etc/apt/sources.list.d/opera.list'\nsudo sh -c 'wget -O - http://deb.opera.com/archive.key | apt-key add -'\nsudo apt-get update\nsudo apt-get install opera"
+  },
+  {
+    "name": "Oracle Java Development Kit 8",
+    "web": "java.com",
+    "image": "https://sdtimes.com/wp-content/uploads/2015/10/1026.sdt-javaone.png",
+    "category": "",
+    "download": "",
+    "description": "Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible.",
+    "commands": "sudo apt-get update\\nsudo apt-get install oracle-java8-installer"
+  },
+  {
+    "name": "Oracle Java Development Kit 9",
+    "web": "java.com",
+    "image": "https://sdtimes.com/wp-content/uploads/2015/10/1026.sdt-javaone.png",
+    "category": "",
+    "download": "",
+    "description": "Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible.",
+    "commands": "sudo apt-get update\\nsudo apt-get install oracle-java9-installer"
+  },
+  {
+    "name": "Python",
+    "web": "www.python.org/",
+    "image": "https://www.python.org/static/opengraph-icon-200x200.png",
+    "category": "Programming language",
+    "download": "",
+    "description": "Python is a widely used high-level programming language for general-purpose programming, created by Guido van Rossum and first released in 1991.",
+    "commands": "sudo add-apt-repository ppa:jonathonf/python-3.6\nsudo apt-get update\nsudo apt-get install python3.6\n"
+  },
+  {
+    "name": "Scala",
+    "web": "/www.scala-lang.org",
+    "image": "https://www.scala-lang.org/resources/img/frontpage/scala-spiral.png",
+    "category": "Programming language",
+    "download": "",
+    "description": "Scala is a general-purpose programming language providing support for functional programming and a strong static type system. Designed to be concise, many of Scala's design decisions aimed to address criticisms of Java.",
+    "commands": "wget www.scala-lang.org/files/archive/scala-2.11.7.deb\nsudo dpkg -i scala-2.11.7.deb"
   },
   {
     "name": "Shortcut",
@@ -126,6 +216,15 @@
     "commands": "mkdir ~/setthisup\ncd ~/setthisup\nwget https://downloads.slack-edge.com/linux_releases/slack-desktop-3.0.0-amd64.deb\nsudo dpkg -i slack*.deb"
   },
   {
+    "name": "SM Player",
+    "web": "https://www.smplayer.info/",
+    "image": "https://www.smplayer.info/images/free-media-player.png",
+    "category": "Media player",
+    "download": "https://www.smplayer.info/en/downloads",
+    "description": "SMPlayer is a free media player for Windows and Linux with built-in codecs that can play virtually all video and audio formats. It doesn't need any external codecs. Just install SMPlayer and you'll be able to play all formats without the hassle to find and install codec packs.",
+    "commands": "sudo add-apt-repository ppa:rvm/smplayer\nsudo apt-get update\nsudo apt-get install smplayer"
+  },
+  {
     "name": "Spark",
     "web": "spark.apache.org",
     "image": "https://zeppelin.apache.org/assets/themes/zeppelin/img/spark_logo.jpg",
@@ -153,46 +252,22 @@
     "commands": "sudo add-apt-repository multiverse\nsudo apt-get install steam"
   },
   {
-    "name": "Java Development Kit",
-    "os": "deb",
-    "web": "java.com",
-    "image": "https://sdtimes.com/wp-content/uploads/2015/10/1026.sdt-javaone.png",
-    "description": "Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible.",
-    "commands": "sudo apt-get update\nsudo apt-get install default-jdk"
-  },
-  {
-    "name": "Oracle Java Development Kit 8",
-    "os": "deb",
-    "web": "java.com",
-    "image": "https://sdtimes.com/wp-content/uploads/2015/10/1026.sdt-javaone.png",
-    "description": "Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible.",
-    "commands": "sudo apt-get update\nsudo apt-get install oracle-java8-installer"
-  },
-  {
-    "name": "Oracle Java Development Kit 9",
-    "os": "deb",
-    "web": "java.com",
-    "image": "https://sdtimes.com/wp-content/uploads/2015/10/1026.sdt-javaone.png",
-    "description": "Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible.",
-    "commands": "sudo apt-get update\nsudo apt-get install oracle-java9-installer"
-  },
-  {
-    "name": "Atom",
-    "web": "https://atom.io/",
-    "image": "https://discourse-cdn-sjc1.com/business/uploads/github_atom/490/d8548f4ce56f1599.png",
-    "category": "development",
-    "download": "https://atom.io/download/deb",
-    "description": "Atom is a text editor that's modern, approachable, yet hackable to the core—a tool you can customize to do anything but also use productively without ever touching a config file.",
-    "commands": "sudo add-apt-repository ppa:webupd8team/atom\nsudo apt update\nsudo apt install atom"
-  },
-  {
     "name": "Sublime Text 3",
     "web": "https://www.sublimetext.com",
-    "image": "https://www.sublimetext.com/images/logo.svg",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d2/Sublime_Text_3_logo.png/150px-Sublime_Text_3_logo.png",
     "category": "Text editor",
     "download": "https://www.sublimetext.com/3",
     "description": "Sublime Text is a proprietary source code editor with a Python API. It supports many programming languages and markup languages, and its functionality can be extended by users with plugins.",
     "commands": "wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -\necho \"deb https://download.sublimetext.com/ apt/stable/\" | sudo tee /etc/apt/sources.list.d/sublime-text.list\nsudo apt-get update\nsudo apt-get install sublime-text"
+  },
+  {
+    "name": "Thunderbird",
+    "web": "https://www.mozilla.org/en-GB/thunderbird/",
+    "image": "https://www.mozilla.org/media/img/thunderbird/landing/logo.e19c8e6706dd.png",
+    "category": "Email client",
+    "download": "https://download.mozilla.org/?product=thunderbird-52.5.0-SSL&os=linux64&lang=en-GB",
+    "description": "Mozilla Thunderbird is a free, open-source, and cross-platform email, news, RSS, and chat client developed by the Mozilla Foundation. The project strategy was modeled after that of the Mozilla Firefox web browser. ",
+    "commands": "sudo apt install thunderbird"
   },
   {
     "name": "Ubuntu Extras",
@@ -204,31 +279,13 @@
     "commands": "sudo apt-get install ubuntu-restricted-extras"
   },
   {
-    "name": "Git",
-    "web": "https://git-scm.com/",
-    "image": "http://gitforwindows.org/img/git_logo.png",
-    "category": "Version control software",
-    "download": "",
-    "description": "Git is a version control system for tracking changes in computer files and coordinating work on those files among multiple people.",
-    "commands": "sudo apt-get install git\n"
-  },
-  {
-    "name": "Scala",
-    "web": "http://www.scala-lang.org",
-    "image": "https://www.scala-lang.org/resources/img/frontpage/scala-spiral.png",
-    "category": "Programming language",
-    "download": "",
-    "description": "Scala is a general-purpose programming language providing support for functional programming and a strong static type system. Designed to be concise, many of Scala's design decisions aimed to address criticisms of Java.",
-    "commands": "wget www.scala-lang.org/files/archive/scala-2.11.7.deb\nsudo dpkg -i scala-2.11.7.deb"
-  },
-  {
-    "name": "Python",
-    "web": "www.python.org/",
-    "image": "https://www.python.org/static/opengraph-icon-200x200.png",
-    "category": "Programming language",
-    "download": "",
-    "description": "Python is a widely used high-level programming language for general-purpose programming, created by Guido van Rossum and first released in 1991.",
-    "commands": "sudo add-apt-repository ppa:jonathonf/python-3.6\nsudo apt-get update\nsudo apt-get install python3.6\n"
+    "name": "Ubuntu Tweak",
+    "web": "https://launchpad.net/ubuntu-tweak",
+    "image": "https://launchpadlibrarian.net/10332274/ubuntu-tweak64.png",
+    "category": "System Tool",
+    "download": "https://launchpad.net/ubuntu-tweak",
+    "description": "Unity Tweak Tool is a settings manager for the Unity desktop. It provides users with a fast, simple and easy-to-use interface with which to access many useful and little known features and settings of the desktop environment that one may want to configure.",
+    "commands": "sudo add-apt-repository ppa:tualatrix/ppa\n\nsudo apt-get update\nsudo apt-get install ubuntu-tweak"
   },
   {
     "name": "Unity tweak tools",
@@ -238,6 +295,15 @@
     "download": "",
     "description": "",
     "commands": "sudo install unity-tweak-tool"
+  },
+  {
+    "name": "VirtualBox",
+    "web": "https://www.virtualbox.org/",
+    "image": "https://www.virtualbox.org/graphics/vbox_logo2_gradient.png",
+    "category": "",
+    "download": "",
+    "description": "Oracle VM VirtualBox is a free and open-source hypervisor for x86 computers currently being developed by Oracle Corporation.",
+    "commands": "sudo sh -c 'echo \"deb http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib\" >> /etc/apt/sources.list.d/virtualbox.list'\nwget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -\nsudo apt-get update\nsudo apt-get install virtualbox-5.0"
   },
   {
     "name": "Visual Studio Code",
