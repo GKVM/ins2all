@@ -1,4 +1,4 @@
-# Set this up
+# ins2all
 
 [![Join the chat at https://gitter.im/gkvm/set-it-up](https://badges.gitter.im/gkvm/set-this-up.svg)](https://gitter.im/gkvm/set-it-up?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
