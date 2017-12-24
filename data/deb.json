@@ -185,7 +185,7 @@
     "image": "",
     "category": "video editor",
     "download": "",
-    "description": "",
+    "description": "Shotcut is a free and open-source cross-platform video editing application for FreeBSD, Linux, OS X and Windows. Started in 2011 by Dan Dennedy, Shotcut is developed on the MLT Multimedia Framework, in development since 2004 by the same author.",
     "commands": "snap install shotcut --classic"
   },
   {
@@ -331,5 +331,50 @@
     "download": "",
     "description": "VNC consists of a server and client application for the Virtual Network Computing protocol to control another computer's screen remotely.",
     "commands": "mkdir ~/setthisup\ncd ~/setthisup\nwget https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.2.0-Linux-x64.deb\nsudo dpkg -i VNC*.deb"
+  },
+  {
+    "name": "Google Play Music™ Desktop Player",
+    "web": "https://www.googleplaymusicdesktopplayer.com/",
+    "image": "",
+    "category": "",
+    "download": "https://github-production-release-asset-2e65be.s3.amazonaws.com/40008106/a2ba797e-8c44-11e7-8856-0944bee86465?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20171223%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20171223T172358Z&X-Amz-Expires=300&X-Amz-Signature=9353c6e874613f2f70ffc5d24c54573f73cb08b9a1864828ebb7a9e4af42b824&X-Amz-SignedHeaders=host&actor_id=15769003&response-content-disposition=attachment%3B%20filename%3Dgoogle-play-music-desktop-player_4.4.1_i386.deb&response-content-type=application%2Foctet-stream",
+    "description": "Run Google Play Music as a standalone desktop app. Never again will you have to hunt through your tabs to pause your music, or stop listening to your favourite song because Chrome is guzzling up all your RAM..",
+    "commands": ""
+  },
+  {
+    "name": "nuclear",
+    "web": "http://nuclear.gumblert.tech/",
+    "image": "http://nuclear.gumblert.tech/logo.png",
+    "category": "",
+    "download": "https://github.com/nukeop/nuclear/releases/download/george/nuclear-george-linux-x64.deb",
+    "description": "Multiplatform music player",
+    "commands": ""
+  },
+  {
+    "name": "PulseEffects",
+    "web": "https://github.com/wwmm/pulseeffects",
+    "image": "",
+    "category": "",
+    "download": "",
+    "description": "Audio effects for Pulseaudio applications\n\n",
+    "commands": "#Ubuntu 17.10 + \nwget -q -O- http://repo.dumalogiya.ru/keys/mikhailnov_pub.gpg | sudo apt-key add -\necho \"deb http://repo.dumalogiya.ru/aptly/public artful main\" | sudo tee /etc/apt/sources.list.d/dumalogiya-artful.list\nsudo apt update\nsudo apt install pulseeffects"
+  },
+  {
+    "name": "Pidgin",
+    "web": "https://pidgin.im/",
+    "image": "",
+    "category": "",
+    "download": "",
+    "description": "Pidgin is a free and open-source multi-platform instant messaging client, based on a library named libpurple that has support for many instant messaging protocols, allowing the user to simultaneously log into various services from one application.",
+    "commands": "sudo add-apt-repository ppa:pidgin-developers/ppa\nsudo apt-get update\nsudo apt-get install pidgin"
+  },
+  {
+    "name": "BlueJ",
+    "web": "https://bluej.org/",
+    "image": "https://www.bluej.org/bluej-icons/bluej-icon-large.gif",
+    "category": "",
+    "download": "http://www.bluej.org/download/files/BlueJ-linux-412.deb",
+    "description": "BlueJ is an integrated development environment for the Java programming language, developed mainly for educational purposes, but also suitable for small-scale software development. It runs with the help of JDK.",
+    "commands": "wget \"http://www.bluej.org/download/files/BlueJ-linux-412.deb\" -P ~/Downloads/\nsudo dpkg -i ~/Downloads/BlueJ-linux-*.deb"
   }
 ]
