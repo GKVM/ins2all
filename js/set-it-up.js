@@ -21,7 +21,7 @@ function generateScript() {
             .concat(splitCommands[0]);
     }
 
-    if (postUpdateCommand.length > 1) {
+    if (postUpdateCommand.length > 0) {
         script = script
             .concat("\n\n#Update system")
             .concat("\nsudo apt-get update\n")
