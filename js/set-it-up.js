@@ -12,7 +12,7 @@ function generateScript() {
 
     let i;
     for (i = 0; i < selectedApps.length; i++) {
-        let splitCommands = selectedApps[i].commands.split(/sudo \D+ update/);
+        let splitCommands = selectedApps[i].commands.split(/sudo apt-get update/);
         if (splitCommands.length === 2) {
             postUpdateCommand.push({"name": selectedApps[i].name, "post_update": splitCommands[1]});
         }
