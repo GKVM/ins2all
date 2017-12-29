@@ -44,6 +44,8 @@ function getFile() {
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(script));
     element.setAttribute('download', fileName);
 
+    ga('send', 'event', 'file', 'download', 'Bash');
+
     element.style.display = 'none';
     document.body.appendChild(element);
     element.click();
