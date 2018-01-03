@@ -7,7 +7,9 @@ let fileName = "ins2all-default.sh";
 
 
 function generateScript() {
-    let script = "#!/bin/bash\n\n";
+    let script = "#!/bin/bash\n" +
+        "\n# IMPORTANT"+
+        "\n# Make sure you know exactly what every part of each command does before running it!\n";
     let postUpdateCommand = [];
 
     let i;
