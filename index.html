@@ -44,7 +44,7 @@
 <div class="section no-pad-bot" id="index-banner">
     <div class="container">
         <br><br>
-        <h1 class="header center orange-text">Ins2all</h1>
+        <h1 class="header center orange-text">Install</h1>
         <br>
         <h5 class="center black-text light">Simple way to install and set up applications in your computer.</h5>
         <div class="row center black-text">
@@ -63,21 +63,21 @@
         <div id="os-div" class="center badge light"></div>
         <div id="extra-text" class="row center"></div>
         <div class="row center">
-            <a href="#input-apps" id="download-button"
+            <a href="#input-app" id="download-button"
                class="btn-large waves-effect waves-light orange">Get Started</a>
         </div>
         <br>
         <br>
     </div>
 </div>
-<div class="container">
+<div class="container" id="input-app">
     <div class="light">
         Selected apps
     </div>
     <ul class="collection" id="selected-apps">
     </ul>
 
-    <div class="row" id="input-app">
+    <div class="row">
         <div class="col s12">
             <div class="row">
                 <div class="input-field col s12">
@@ -85,11 +85,15 @@
                     <input type="text" id="input-apps" class="autocomplete">
                     <label for="input-apps">Search software</label>
                 </div>
+                <i class="light tiny">
+                    Couldn't find an app?
+                    Submit it <a class="" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfwDlvLuQLQ3pUsyd47zctHvXchsh4CN8dyz8TR7ZBQnQ4pDQ/viewform?usp=sf_link">here</a>.
+                </i>
             </div>
         </div>
     </div>
-    <div class="section" id="download">
 
+    <div class="section" id="download">
         <div class="row center">
             <a class="waves-effect waves-light btn tooltipped" data-position="top"
                data-tooltip="Get script" onclick="getFile()">
@@ -105,7 +109,9 @@
             <div>Execute the script &emsp;<a class="tooltipped" data-position="top" data-delay="600"
                                              data-tooltip="Paste the following command in Terminal or Bash">?</a>
             </div>
-            <p class="center-align caption"><b> Make sure you know exactly what each part of the script does before running it.</b></p>
+            <p class="center-align caption">
+                Before running it, please make sure you know what each part of the script will do.
+            </p>
         </div>
         <div class="row center">
             <div class="col s12 center" style="display: flex; flex-wrap: wrap; justify-content: center">
@@ -209,8 +215,8 @@
              *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
              *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
             var disqus_config = function () {
-            this.page.url = "https://www.ins2all.com";  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = ""; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                this.page.url = "https://www.ins2all.com";  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = ""; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
             };
             (function () { // DON'T EDIT BELOW THIS LINE
                 var d = document, s = d.createElement('script');
@@ -307,7 +313,7 @@ Demo of how it works in Linux.
             let args = getParameterByName('a');
             console.log(args);
             if (args === null) {
-                addToList('Chrome');
+                addToList('Firefox');
                 addToList('VLC');
             } else {
                 args.split(',').forEach(

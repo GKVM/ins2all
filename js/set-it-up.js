@@ -9,7 +9,7 @@ let fileName = "ins2all-default.sh";
 function generateScript() {
     let script = "#!/bin/bash\n" +
         "\n# IMPORTANT"+
-        "\n# Make sure you know exactly what every part of each command does before running it!\n";
+        "\n# Make sure you know exactly what every part of each command does before running it.\n";
     let postUpdateCommand = [];
 
     let i;
@@ -77,7 +77,7 @@ function copyText() {
     let copyText = document.getElementById("run-command-box");
     copyText.select();
     document.execCommand("Copy");
-    alert("Copied the text: " + copyText.value);
+    alert("Copied to clipboard: " + copyText.value);
 }
 
 
