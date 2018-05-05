@@ -27,7 +27,6 @@
     <link rel="shortcut icon" href="icons/image.png">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-    <title>ins2all - Open source tool to install applications and setup your computer.</title>
 
     <!-- CSS  -->
     <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -61,6 +60,14 @@
             If the application you want is not present, please mention it in the comments.
         </p>
         <div id="os-div" class="center badge light"></div>
+        <div class="input-field center col s12 m4 push-m6" id="option">
+            <select id="item">
+                <option value="Debian" selected>Debian</option>
+                <option value="RPM">RPM</option>
+            </select>
+            <label>Distribution</label>
+        </div>
+
         <div id="extra-text" class="row center"></div>
         <div class="row center">
             <a href="#input-app" id="download-button"
@@ -87,7 +94,8 @@
                 </div>
                 <i class="light tiny">
                     Couldn't find an app?
-                    Submit it <a class="" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfwDlvLuQLQ3pUsyd47zctHvXchsh4CN8dyz8TR7ZBQnQ4pDQ/viewform?usp=sf_link">here</a>.
+                    Submit it <a class="" target="_blank"
+                                 href="https://docs.google.com/forms/d/e/1FAIpQLSfwDlvLuQLQ3pUsyd47zctHvXchsh4CN8dyz8TR7ZBQnQ4pDQ/viewform?usp=sf_link">here</a>.
                 </i>
             </div>
         </div>
@@ -230,11 +238,17 @@
     </div>
 </div>
 
-<ul id="dropdown1" class="dropdown-content">
-    <li><a href="#!">one<span class="badge">1</span></a></li>
-    <li><a href="#!">two<span class="new badge">1</span></a></li>
+
+<!-- Dropdown Structure -->
+<ul id='dropdown1' class='dropdown-content'>
+    <li><a href="#!">one</a></li>
+    <li><a href="#!">two</a></li>
+    <li class="divider" tabindex="-1"></li>
     <li><a href="#!">three</a></li>
+    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
 </ul>
+
 
 <footer class="page-footer orange">
     <div class="footer-copyright">
@@ -273,25 +287,51 @@
 
     let OSName = getOS();
 
-    console.log(OSName);
-    $('#os-div').html(OSName);
-    switch (OSName) {
-        case "Linux" :
-            getAppList('data/deb.json');
-            break;
-        case "MacOS" :
-            getAppList('data/mac.json');
-            break;/*
+    if (OSName == 'Linux') {
+        $('#option').show(200);
+        $('#option').on('change', 'select', function () {
+            console.log("New");
+            $('.selected').remove();
+            reseltList();
+            getDataBasedOnOSName(OSName)
+        });
+        $('select').material_select();
+    }
+
+    getDataBasedOnOSName(OSName);
+
+    function getDataBasedOnOSName(OSName) {
+        console.log(OSName);
+        $('#os-div').html(OSName);
+        switch (OSName) {
+            case "Linux" :
+                let v = $('#item').val();
+                console.log("selected option is " + v);
+                switch (v) {
+                    case "Debian":
+                        getAppList('data/deb.json');
+                        break;
+                    case "RPM":
+                        getAppList('data/rpm.json');
+                        break;
+                    default:
+                        getAppList('data/deb.json');
+                }
+                break;
+            case "MacOS" :
+                getAppList('data/mac.json');
+                break;/*
             case "Windows" :
                 getAppList('data/windows.json');
                 break;*/
-        default :
-            $('#extra-text').html(`<pre class="center-align">
+            default :
+                $('#extra-text').html(`<pre class="center-align">
 ${OSName} is not supported yet.
 Only works in Linux and MacOS now.
 Demo of how it works in Linux.
  </pre>`);
-            getAppList('data/deb.json');
+                getAppList('data/deb.json');
+        }
     }
 
     function getAppList(path) {
@@ -370,7 +410,12 @@ Demo of how it works in Linux.
             }
         }
 
-        divElement.setAttribute('class', 'collection-item avatar hoverable');
+        console.log("Selected app is: " + selectedApp);
+        if(selectedApp === undefined){
+            return;
+        }
+
+        divElement.setAttribute('class', 'collection-item avatar hoverable selected');
         divElement.setAttribute('id', selectedApp.name.replace(/ /g, '-'));
         divElement.innerHTML =
             `<img src='${selectedApp.image}' alt="" class="responsive-img circle">

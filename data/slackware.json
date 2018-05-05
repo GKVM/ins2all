@@ -1,0 +1,380 @@
+[
+  {
+    "name": "Atom",
+    "web": "https://atom.io/",
+    "image": "https://discourse-cdn-sjc1.com/business/uploads/github_atom/490/d8548f4ce56f1599.png",
+    "category": "development",
+    "download": "https://atom.io/download/deb",
+    "description": "Atom is a text editor that's modern, approachable, yet hackable to the core—a tool you can customize to do anything but also use productively without ever touching a config file.",
+    "commands": "sudo add-apt-repository ppa:webupd8team/atom\nsudo apt update\nsudo apt install atom"
+  },
+  {
+    "name": "Chrome",
+    "web": "google.com/chrome",
+    "image": "https://lh3.googleusercontent.com/nYhPnY2I-e9rpqnid9u9aAODz4C04OycEGxqHG5vxFnA35OGmLMrrUmhM9eaHKJ7liB-=w300",
+    "category": "Web browser",
+    "download": "",
+    "description": "Google Chrome is a freeware web browser developed by Google. It was first released in September 2008, for Microsoft Windows, and was later ported to Linux, macOS, iOS and Android.",
+    "commands": "wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - \nsudo sh -c 'echo \"deb http://dl.google.com/linux/chrome/deb/ stable main\" >> /etc/apt/sources.list.d/google.list'\nsudo apt-get update \nsudo apt-get install google-chrome-stable "
+  },
+  {
+    "name": "Chromium Browser",
+    "web": "https://www.chromium.org",
+    "image": "https://www.chromium.org/_/rsrc/1438879449147/config/customLogo.gif?revision=3",
+    "category": "Browser",
+    "download": "https://www.chromium.org/getting-involved/download-chromium",
+    "description": "Chromium is an open-source Web browser project started by Google, to provide the source code for the proprietary Google Chrome browser.",
+    "commands": "sudo apt update\nsudo apt install chromium-browser"
+  },
+  {
+    "name": "Docker",
+    "web": "https://www.docker.com/",
+    "image": "https://newrelic.com/assets/partners/docker/vector_docker-whale.svg",
+    "category": "",
+    "download": "",
+    "description": "Docker is a software technology providing containers, promoted by the company Docker, Inc. Docker provides an additional layer of abstraction and automation of operating-system-level virtualization on Windows and Linux.",
+    "commands": "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -\nsudo add-apt-repository \"deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable\"\nsudo apt-get update\napt-cache policy docker-ce\nsudo apt-get install -y docker-ce\nsudo systemctl status docker"
+  },
+  {
+    "name": "Firefox",
+    "web": "www.mozilla.org/en-US/firefox",
+    "image": "https://botw-pd.s3.amazonaws.com/styles/logo-thumbnail/s3/082013/mozilla_firefox_2.png?itok=sweQlR0Y",
+    "category": "Web browser",
+    "download": "",
+    "description": "Mozilla Firefox is a free and open-source web browser developed by the Mozilla Foundation and its subsidiary the Mozilla Corporation.",
+    "commands": "cd ~\nwget https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US\ntar zcPf ~/mozilla-backup-$(date +%s).tar.gz ~/.mozilla\njxf firefox*.tar.bz2 -C $HOME\n"
+  },
+  {
+    "name": "Firefox ESR",
+    "web": "https://www.mozilla.org/en-US/firefox/organizations/",
+    "image": "https://botw-pd.s3.amazonaws.com/styles/logo-thumbnail/s3/082013/mozilla_firefox_2.png?itok=sweQlR0Y",
+    "category": "Web browser",
+    "download": "",
+    "description": "Firefox ESR is intended for groups who deploy and maintain the desktop environment in large organizations such as universities and other schools, county or city governments and businesses.",
+    "commands": "sudo add-apt-repository ppa:jonathonf/firefox-esr\nsudo apt-get update\nsudo apt-get install firefox-esr"
+  },
+  {
+    "name": "Geary",
+    "web": "https://wiki.gnome.org/Apps/Geary",
+    "image": "",
+    "category": "",
+    "download": "",
+    "description": "Geary is a free and open-source email client written in Vala, which is based on WebKitGTK+. Although since adopted by the GNOME project, the project originally was developed by the Yorba Foundation.",
+    "commands": "sudo add-apt-repository ppa:yorba/ppa\nsudo apt-get update\nsudo apt-get install geary"
+  },
+  {
+    "name": "Gimp",
+    "web": "https://www.gimp.org/images/frontpage/wilber-big.png",
+    "image": "https://www.gimp.org",
+    "category": "Graphics tool",
+    "download": "https://www.gimp.org/downloads/",
+    "description": "GIMP is a free and open-source raster graphics editor used for image retouching and editing, free-form drawing, converting between different image formats, and more specialized tasks.",
+    "commands": "sudo apt install gimp"
+  },
+  {
+    "name": "Git",
+    "web": "https://git-scm.com/",
+    "image": "http://gitforwindows.org/img/git_logo.png",
+    "category": "Version control software",
+    "download": "",
+    "description": "Git is a version control system for tracking changes in computer files and coordinating work on those files among multiple people.",
+    "commands": "sudo apt-get install git\n"
+  },
+  {
+    "name": "IntelliJ CE",
+    "web": "jetbrains.com/idea/",
+    "image": "https://seeklogo.com/images/I/intellij-idea-logo-F645E1F432-seeklogo.com.png",
+    "category": "",
+    "download": "https://itsfoss.com/install-intellij-ubuntu-linux/",
+    "description": "IntelliJ IDEA is a Java integrated development environment for developing computer software. It is developed by JetBrains, and is available as an Apache 2 Licensed community edition, and in a proprietary commercial edition.",
+    "commands": "sudo add-apt-repository ppa:mmk2410/intellij-idea-community\nsudo apt-get update\nsudo apt-get install intellij-idea-community"
+  },
+  {
+    "name": "Java Development Kit (JDK)",
+    "web": "java.com",
+    "image": "https://sdtimes.com/wp-content/uploads/2015/10/1026.sdt-javaone.png",
+    "category": "",
+    "download": "",
+    "description": "Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible.",
+    "commands": "sudo apt-get update\\nsudo apt-get install default-jdk"
+  },
+  {
+    "name": "LibreOffice",
+    "web": "libreoffice.org",
+    "image": "https://tr1.cbsistatic.com/hub/i/r/2015/08/19/8a73bb60-e4ca-48d9-aa86-a5ea9a7fefef/resize/770x/35785983a484015f4d7bb864f239a3f3/libreofficehero.jpg",
+    "category": "",
+    "download": "",
+    "description": "LibreOffice is a free and open source office suite, a project of The Document Foundation. ",
+    "commands": "sudo add-apt-repository ppa:libreoffice/ppa\nsudo apt update; sudo apt dist-upgrade\nsudo apt install libreoffice-gtk2 libreoffice-gnome"
+  },
+  {
+    "name": "MongoDB",
+    "web": "mongodb.com",
+    "image": "https://avatars0.githubusercontent.com/u/45120?s=280&v=4",
+    "category": "",
+    "download": "",
+    "description": "MongoDB is a free and open-source cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schemas.",
+    "commands": "sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6\necho \"deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse\" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list\nsudo apt-get update\nsudo apt-get install -y mongodb-org"
+  },
+  {
+    "name": "MPV Media Player",
+    "web": "https://mpv.io/",
+    "image": "https://mpv.io/images/mpv-logo-128-0baae5aa.png",
+    "category": "Media player",
+    "download": "https://mpv.io/installation/",
+    "description": "mpv is media player software, based on MPlayer and mplayer2. It is free and open-source software released under a mix of licenses including GNU General Public License version 2 or later (GPLv2+), with parts under GNU Lesser Public License version 2.1 or later (LGPLv2.1+), and some optional parts under GNU General Public License version 3 (GPLv3).",
+    "commands": "sudo add-apt-repository ppa:mc3man/mpv-tests\nsudo apt update && sudo apt install mpv"
+  },
+  {
+    "name": "Node.js",
+    "web": "https://nodejs.org/",
+    "image": "https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png",
+    "category": "JavaScript Runtime Environment",
+    "download": "https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04",
+    "description": "Node.js is an open-source, cross-platform JavaScript run-time environment for executing JavaScript code server-side.",
+    "commands": "sudo apt-get update\nsudo apt-get install nodejs\nsudo apt-get install npm"
+  },
+  {
+    "name": "Opera",
+    "web": "opera.com",
+    "image": "http://www-static.operacdn.com/static-heap/7f/7f022d3c6da5eeaa8b0e9d4aef828465121b6e4c/opera-browser-for-android.png",
+    "category": "Web browser",
+    "download": "",
+    "description": "Opera is a web browser for Windows, macOS, and Linux operating systems developed by Opera Software. It uses the Blink layout engine. An earlier version using the Presto layout engine is still available, and runs on FreeBSD systems.",
+    "commands": "sudo sh -c 'echo \"deb http://deb.opera.com/opera/ stable non-free\" >> /etc/apt/sources.list.d/opera.list'\nsudo sh -c 'wget -O - http://deb.opera.com/archive.key | apt-key add -'\nsudo apt-get update\nsudo apt-get install opera"
+  },
+  {
+    "name": "Oracle Java Development Kit 8",
+    "web": "java.com",
+    "image": "https://sdtimes.com/wp-content/uploads/2015/10/1026.sdt-javaone.png",
+    "category": "",
+    "download": "",
+    "description": "Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible.",
+    "commands": "sudo apt-get update\\nsudo apt-get install oracle-java8-installer"
+  },
+  {
+    "name": "Oracle Java Development Kit 9",
+    "web": "java.com",
+    "image": "https://sdtimes.com/wp-content/uploads/2015/10/1026.sdt-javaone.png",
+    "category": "",
+    "download": "",
+    "description": "Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible.",
+    "commands": "sudo apt-get update\\nsudo apt-get install oracle-java9-installer"
+  },
+  {
+    "name": "Python",
+    "web": "www.python.org/",
+    "image": "https://www.python.org/static/opengraph-icon-200x200.png",
+    "category": "Programming language",
+    "download": "",
+    "description": "Python is a widely used high-level programming language for general-purpose programming, created by Guido van Rossum and first released in 1991.",
+    "commands": "sudo add-apt-repository ppa:jonathonf/python-3.6\nsudo apt-get update\nsudo apt-get install python3.6\n"
+  },
+  {
+    "name": "Scala",
+    "web": "/www.scala-lang.org",
+    "image": "https://www.scala-lang.org/resources/img/frontpage/scala-spiral.png",
+    "category": "Programming language",
+    "download": "",
+    "description": "Scala is a general-purpose programming language providing support for functional programming and a strong static type system. Designed to be concise, many of Scala's design decisions aimed to address criticisms of Java.",
+    "commands": "wget www.scala-lang.org/files/archive/scala-2.11.7.deb\nsudo dpkg -i scala-2.11.7.deb"
+  },
+  {
+    "name": "Shortcut",
+    "web": "https://www.shotcut.org/",
+    "image": "",
+    "category": "video editor",
+    "download": "",
+    "description": "Shotcut is a free and open-source cross-platform video editing application for FreeBSD, Linux, OS X and Windows. Started in 2011 by Dan Dennedy, Shotcut is developed on the MLT Multimedia Framework, in development since 2004 by the same author.",
+    "commands": "snap install shotcut --classic"
+  },
+  {
+    "name": "Signal",
+    "web": "signal.org",
+    "image": "https://signal.org/assets/header/logo-70556391d9e0f1642cf4ac8bafb3911db909aa3ca820e6d2dc412fa1cb509fa5.png",
+    "category": "",
+    "download": "",
+    "description": "Signal is an encrypted communications application for Android and iOS. It uses the Internet to send one-to-one and group messages, which can include files, voice notes, images and videos, and make one-to-one voice and video calls.",
+    "commands": "curl -s https://updates.signal.org/desktop/apt/keys.asc | sudo apt-key add - \necho \"deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main\" | sudo tee -a /etc/apt/sources.list.d/signal-xenial.list \nsudo apt update\nsudo apt install signal-desktop"
+  },
+  {
+    "name": "Skype",
+    "web": "web.skype.com/",
+    "image": "https://seeklogo.com/images/S/skype-logo-F4A7960445-seeklogo.com.png",
+    "category": "",
+    "download": "",
+    "description": "Skype is a telecommunications application software product that specializes in providing video chat and voice calls between computers, tablets, mobile devices, the Xbox One console, and smartwatches via the Internet and to regular telephones.",
+    "commands": "sudo apt-get install skype\n"
+  },
+  {
+    "name": "Slack",
+    "web": "slack.com/",
+    "image": "https://brandfolder.com/slack/logo/slack-primary-logo.png",
+    "category": "Team collaboration tools",
+    "download": "",
+    "description": "Slack is a cloud-based set of proprietary team collaboration tools and services, founded by Stewart Butterfield. Slack began as an internal tool used by their company, Tiny Speck, in the development of Glitch, a now defunct online game.",
+    "commands": "mkdir ~/setthisup\ncd ~/setthisup\nwget https://downloads.slack-edge.com/linux_releases/slack-desktop-3.0.0-amd64.deb\nsudo dpkg -i slack*.deb"
+  },
+  {
+    "name": "SM Player",
+    "web": "https://www.smplayer.info/",
+    "image": "https://www.smplayer.info/images/free-media-player.png",
+    "category": "Media player",
+    "download": "https://www.smplayer.info/en/downloads",
+    "description": "SMPlayer is a free media player for Windows and Linux with built-in codecs that can play virtually all video and audio formats. It doesn't need any external codecs. Just install SMPlayer and you'll be able to play all formats without the hassle to find and install codec packs.",
+    "commands": "sudo add-apt-repository ppa:rvm/smplayer\nsudo apt-get update\nsudo apt-get install smplayer"
+  },
+  {
+    "name": "Spark",
+    "web": "spark.apache.org",
+    "image": "https://zeppelin.apache.org/assets/themes/zeppelin/img/spark_logo.jpg",
+    "category": " Cluster-computing framework",
+    "download": "",
+    "description": "Apache Spark is an open-source cluster-computing framework. Originally developed at the University of California, Berkeley's AMPLab, the Spark codebase was later donated to the Apache Software Foundation, which has maintained it since.",
+    "commands": "wget http://d3kbcqa49mib13.cloudfront.net/spark-2.0.2-bin-hadoop2.7.tgz\ntar -xvf spark-2.0.2-bin-hadoop2.7.tgz\ncp -rv spark-2.0.2-bin-hadoop2.7/* /opt/spark"
+  },
+  {
+    "name": "Stacer",
+    "web": "",
+    "image": "",
+    "category": "",
+    "download": "",
+    "description": "System optimizer and monitor",
+    "commands": "wget https://github.com/oguzhaninan/Stacer/releases/download/v1.0.4/Stacer_1.0.4_amd64.deb\nsudo dpkg --install Stacer_1.0.4_amd64.deb"
+  },
+  {
+    "name": "Steam",
+    "web": "store.steampowered.com/",
+    "image": "https://www.google.co.in/imgres?imgurl=http://3.bp.blogspot.com/-Jbo2ByKvK60/VoFsdmqP4mI/AAAAAAAAIxk/Ahz__bJjweU/s1600/Logo%252BSteam.png&imgrefurl=http://logo-share.blogspot.com/2015/12/steam-logo.html&h=1067&w=1600&tbnid=LQTWWShCy8gZ1M:&tbnh=132&tbnw=198&usg=__sAs0EBs7Pyal0tWIwIwbO_iFp3o%3D&vet=1&docid=q8pDB1IDQ0b4iM&itg=1&sa=X&ved=0ahUKEwj89si2uPDXAhWMK48KHYTrB18Q_B0IogEwEg",
+    "category": "",
+    "download": "",
+    "description": "Steam is a digital distribution platform developed by Valve Corporation, which offers digital rights management, multiplayer gaming, video streaming and social networking services.",
+    "commands": "sudo add-apt-repository multiverse\nsudo apt-get install steam"
+  },
+  {
+    "name": "Sublime Text 3",
+    "web": "https://www.sublimetext.com",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d2/Sublime_Text_3_logo.png/150px-Sublime_Text_3_logo.png",
+    "category": "Text editor",
+    "download": "https://www.sublimetext.com/3",
+    "description": "Sublime Text is a proprietary source code editor with a Python API. It supports many programming languages and markup languages, and its functionality can be extended by users with plugins.",
+    "commands": "wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -\necho \"deb https://download.sublimetext.com/ apt/stable/\" | sudo tee /etc/apt/sources.list.d/sublime-text.list\nsudo apt-get update\nsudo apt-get install sublime-text"
+  },
+  {
+    "name": "Thunderbird",
+    "web": "https://www.mozilla.org/en-GB/thunderbird/",
+    "image": "https://www.mozilla.org/media/img/thunderbird/landing/logo.e19c8e6706dd.png",
+    "category": "Email client",
+    "download": "https://download.mozilla.org/?product=thunderbird-52.5.0-SSL&os=linux64&lang=en-GB",
+    "description": "Mozilla Thunderbird is a free, open-source, and cross-platform email, news, RSS, and chat client developed by the Mozilla Foundation. The project strategy was modeled after that of the Mozilla Firefox web browser. ",
+    "commands": "sudo apt install thunderbird"
+  },
+  {
+    "name": "Ubuntu Extras",
+    "web": "",
+    "image": "",
+    "category": "",
+    "download": "",
+    "description": "",
+    "commands": "sudo apt-get install ubuntu-restricted-extras"
+  },
+  {
+    "name": "Ubuntu Tweak",
+    "web": "https://launchpad.net/ubuntu-tweak",
+    "image": "https://launchpadlibrarian.net/10332274/ubuntu-tweak64.png",
+    "category": "System Tool",
+    "download": "https://launchpad.net/ubuntu-tweak",
+    "description": "Unity Tweak Tool is a settings manager for the Unity desktop. It provides users with a fast, simple and easy-to-use interface with which to access many useful and little known features and settings of the desktop environment that one may want to configure.",
+    "commands": "sudo add-apt-repository ppa:tualatrix/ppa\n\nsudo apt-get update\nsudo apt-get install ubuntu-tweak"
+  },
+  {
+    "name": "Unity tweak tools",
+    "web": "",
+    "image": "",
+    "category": "",
+    "download": "",
+    "description": "",
+    "commands": "sudo install unity-tweak-tool"
+  },
+  {
+    "name": "VirtualBox",
+    "web": "https://www.virtualbox.org/",
+    "image": "https://www.virtualbox.org/graphics/vbox_logo2_gradient.png",
+    "category": "",
+    "download": "",
+    "description": "Oracle VM VirtualBox is a free and open-source hypervisor for x86 computers currently being developed by Oracle Corporation.",
+    "commands": "sudo sh -c 'echo \"deb http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib\" >> /etc/apt/sources.list.d/virtualbox.list'\nwget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -\nsudo apt-get update\nsudo apt-get install virtualbox-5.0"
+  },
+  {
+    "name": "Visual Studio Code",
+    "web": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Visual_Studio_Code_0.10.1_icon.png",
+    "category": "",
+    "download": "",
+    "description": "Visual Studio Code is a source code editor developed by Microsoft for Windows, Linux and macOS. It includes support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring.",
+    "commands": "curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg\nsudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg\nsudo sh -c 'echo \"deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main\" > /etc/apt/sources.list.d/vscode.list'\nsudo apt-get install code"
+  },
+  {
+    "name": "VLC",
+    "web": "videolan.org/vlc/",
+    "image": "https://images.videolan.org/images/icons-VLC/vlc.mini.svg",
+    "category": "",
+    "download": "",
+    "description": "VLC media player is a free and open-source, portable and cross-platform media player and streaming media server developed by the VideoLAN project.",
+    "commands": "sudo apt-get install libavcodec-extra-53\nsudo apt-get update\nsudo apt-get install vlc browser-plugin-vlc"
+  },
+  {
+    "name": "VNC",
+    "web": "realvnc.com/",
+    "image": "",
+    "category": "",
+    "download": "",
+    "description": "VNC consists of a server and client application for the Virtual Network Computing protocol to control another computer's screen remotely.",
+    "commands": "mkdir ~/setthisup\ncd ~/setthisup\nwget https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.2.0-Linux-x64.deb\nsudo dpkg -i VNC*.deb"
+  },
+  {
+    "name": "Google Play Music™ Desktop Player",
+    "web": "https://www.googleplaymusicdesktopplayer.com/",
+    "image": "",
+    "category": "",
+    "download": "https://github-production-release-asset-2e65be.s3.amazonaws.com/40008106/a2ba797e-8c44-11e7-8856-0944bee86465?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20171223%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20171223T172358Z&X-Amz-Expires=300&X-Amz-Signature=9353c6e874613f2f70ffc5d24c54573f73cb08b9a1864828ebb7a9e4af42b824&X-Amz-SignedHeaders=host&actor_id=15769003&response-content-disposition=attachment%3B%20filename%3Dgoogle-play-music-desktop-player_4.4.1_i386.deb&response-content-type=application%2Foctet-stream",
+    "description": "Run Google Play Music as a standalone desktop app. Never again will you have to hunt through your tabs to pause your music, or stop listening to your favourite song because Chrome is guzzling up all your RAM..",
+    "commands": ""
+  },
+  {
+    "name": "nuclear",
+    "web": "http://nuclear.gumblert.tech/",
+    "image": "http://nuclear.gumblert.tech/logo.png",
+    "category": "",
+    "download": "https://github.com/nukeop/nuclear/releases/download/george/nuclear-george-linux-x64.deb",
+    "description": "Multiplatform music player",
+    "commands": ""
+  },
+  {
+    "name": "PulseEffects",
+    "web": "https://github.com/wwmm/pulseeffects",
+    "image": "",
+    "category": "",
+    "download": "",
+    "description": "Audio effects for Pulseaudio applications\n\n",
+    "commands": "#Ubuntu 17.10 + \nwget -q -O- http://repo.dumalogiya.ru/keys/mikhailnov_pub.gpg | sudo apt-key add -\necho \"deb http://repo.dumalogiya.ru/aptly/public artful main\" | sudo tee /etc/apt/sources.list.d/dumalogiya-artful.list\nsudo apt update\nsudo apt install pulseeffects"
+  },
+  {
+    "name": "Pidgin",
+    "web": "https://pidgin.im/",
+    "image": "",
+    "category": "",
+    "download": "",
+    "description": "Pidgin is a free and open-source multi-platform instant messaging client, based on a library named libpurple that has support for many instant messaging protocols, allowing the user to simultaneously log into various services from one application.",
+    "commands": "sudo add-apt-repository ppa:pidgin-developers/ppa\nsudo apt-get update\nsudo apt-get install pidgin"
+  },
+  {
+    "name": "BlueJ",
+    "web": "https://bluej.org/",
+    "image": "https://www.bluej.org/bluej-icons/bluej-icon-large.gif",
+    "category": "",
+    "download": "http://www.bluej.org/download/files/BlueJ-linux-412.deb",
+    "description": "BlueJ is an integrated development environment for the Java programming language, developed mainly for educational purposes, but also suitable for small-scale software development. It runs with the help of JDK.",
+    "commands": "wget \"http://www.bluej.org/download/files/BlueJ-linux-412.deb\" -P ~/Downloads/\nsudo dpkg -i ~/Downloads/BlueJ-linux-*.deb"
+  }
+]

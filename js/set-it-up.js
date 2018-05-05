@@ -5,6 +5,11 @@ const modalText = document.getElementById("script-modal");
 let selectedApps = [];
 let fileName = "ins2all-default.sh";
 
+function reseltList(){
+    selectedApps = [];
+    dataList = [];
+    nameAndImageList = [];
+}
 
 function generateScript() {
     let script = "#!/bin/bash\n" +
